@@ -1,0 +1,17 @@
+.buttons {
+    text-align: center;
+}
+
+.header {
+    width: 700px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+}
+
+
+
