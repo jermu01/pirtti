@@ -43,8 +43,32 @@ function infoApplication(event){
     const hospital2 = document.forms['kinderGarten']['hospital2'].value;
     const extrainfo = document.forms['kinderGarten']['extrainfo'].value;
 
-    const inputs = document.querySelectorAll('input');
-    
+    const inputs = document.querySelectorAll('.to-db');
+
+    let postData =''
+    inputs.forEach(function(input){
+        postData += `${input.id}&${input.value}`
+    })
+
+    const textarea = document.querySelectorAll('.t-area');
+
+    let postData_t =''
+    textarea.forEach(function(textarea){
+        postData_t += `${textarea.id}&${textarea.value}`
+    })
+
+    const select = document.querySelectorAll('.s-choice');
+
+    let postData_p =''
+    select.forEach(function(select){
+        postData_p += `${select.id}&${select.value}`
+    })
+
+
+    console.log(postData);
+    console.log(postData_t);
+    console.log(postData_p);
+
 
     console.log("Form has been submitted!");
 
@@ -62,7 +86,7 @@ function infoApplication(event){
     
         ajax.open("POST", "backend/kindergartenApplication.php", true);
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajax.send();
+        ajax.send(postData, postData_t, postData_p);
     }
 
 
