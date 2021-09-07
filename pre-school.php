@@ -19,6 +19,8 @@
   <div class="jumbotron">
   <a href="applications.php" class="previous">&laquo; Takaisin</a>
   <br><br>
+  <form name="preSchool">
+    <fieldset>
     <h1>Esiopetushakemus</h1>
     <br>
     <strong><h4>Lapsen henkilötiedot</h4></strong>
@@ -268,8 +270,11 @@
 
 <br><br>
 
-  <div class="d-grid gap-2">
-  <button class="btn btn-lg btn-secondary" type="submit" id="send" name="send">Lähetä</button>
+    <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-lg btn-secondary">Lähetä</button>
+    </fieldset>
+  </form>
+
 </div>
 </div>
 <?php include_once 'layout/bot.inc.php'; ?>

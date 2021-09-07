@@ -1,23 +1,27 @@
 <?php include_once 'layout/top.inc.php'; ?>
 <?php include_once 'layout/nav.inc.php'; ?>
 
-<title>Päiväkoti Pirtti | Päiväkotihakemus</title>
+<title>Päiväkoti Pirtti | Varhaiskasvatushakemus</title>
 
 <head>
 <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 
 
 <body>
 
+
 <div class="container">
   <div class="jumbotron">
   <a href="applications.php" class="previous">&laquo; Takaisin</a>
+
   <br><br>
-    <h1>Päiväkotihakemus</h1>
+  
+  <form name="kinderGarten">
+    <fieldset>
+    <h1>Varhaiskasvatushakemus</h1>
     <br>
     <strong><h4>Lapsen henkilötiedot</h4></strong>
     <br>
@@ -32,8 +36,8 @@
   </div>
 </div>
 <div class="form-floating mb-3">
-    <input type="human_identity" class="form-control" id="human_identity" placeholder="human_identity">
-    <label for="human_identity">Henkilötunnus</label>
+    <input type="identity" class="form-control" id="identity" placeholder="identity">
+    <label for="identity">Henkilötunnus</label>
   </div>
   <div class="form-floating">
     <input type="address" class="form-control" id="address" placeholder="address">
@@ -50,7 +54,7 @@
       </select>
       <div id="ifYes" style="display: none;">
       <br>
-        <input type="language" class="form-control" id="language" name="language" placeholder="Muu, mikä?"/><br />
+        <input type="language" class="form-control" id="language" name="language" placeholder="mikä?"/><br />
       </div>
 
 
@@ -63,7 +67,7 @@
       </select>
       <div id="yes" style="display: none;">
       <br>
-        <input type="pets" class="form-control" id="pets" name="pets" placeholder="on, mikä?"/><br />
+        <input type="pets" class="form-control" id="pets" name="pets" placeholder="mikä?"/><br />
       </div>
     </div>
 
@@ -76,12 +80,12 @@
     <br>
     <div class="form-group">
   <div class="form-floating mb-3">
-    <input type="firstname" class="form-control" id="firstname" placeholder="firstname">
-    <label for="firstname">Etunimet</label>
+    <input type="firstname2" class="form-control" id="firstname2" placeholder="firstname2">
+    <label for="firstname2">Etunimet</label>
   </div>
   <div class="form-floating">
-    <input type="lastname" class="form-control" id="lastname" placeholder="lastname">
-    <label for="lastname">Sukunimi</label>
+    <input type="lastname2" class="form-control" id="lastname2" placeholder="lastname2">
+    <label for="lastname2">Sukunimi</label>
   </div>
 </div>
 <div class="form-floating mb-3">
@@ -113,33 +117,33 @@
     <br>
     <div class="form-group">
   <div class="form-floating mb-3">
-    <input type="firstname" class="form-control" id="firstname" placeholder="firstname">
-    <label for="firstname">Etunimet</label>
+    <input type="firstname3" class="form-control" id="firstname3" placeholder="firstname3">
+    <label for="firstname3">Etunimet</label>
   </div>
   <div class="form-floating">
-    <input type="lastname" class="form-control" id="lastname" placeholder="lastname">
-    <label for="lastname">Sukunimi</label>
+    <input type="lastname3" class="form-control" id="lastname3" placeholder="lastname3">
+    <label for="lastname3">Sukunimi</label>
   </div>
 </div>
 <div class="form-floating mb-3">
-    <input type="career" class="form-control" id="career" placeholder="career">
-    <label for="career">Ammatti</label>
+    <input type="career2" class="form-control" id="career2" placeholder="career2">
+    <label for="career2">Ammatti</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="job" class="form-control" id="job" placeholder="job">
-    <label for="job">Nykyinen työ-/opiskelupaikka</label>
+    <input type="job2" class="form-control" id="job2" placeholder="job2">
+    <label for="job2">Nykyinen työ-/opiskelupaikka</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="phonenumber" class="form-control" id="phonenumber" placeholder="phonenumber">
-    <label for="phonenumber">Puhelinnumero</label>
+    <input type="phonenumber2" class="form-control" id="phonenumber2" placeholder="phonenumber2">
+    <label for="phonenumber2">Puhelinnumero</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="jobhours" class="form-control" id="jobhours" placeholder="jobhours">
-    <label for="jobhours">Työaika esim. (6:00-18:00) </label>
+    <input type="jobhours2" class="form-control" id="jobhours2" placeholder="jobhours2">
+    <label for="jobhours2">Työaika esim. (6:00-18:00) </label>
   </div>
 <div class="form-floating mb-3">
-    <input type="Email" class="form-control" id="email" placeholder="email">
-    <label for="email">Sähköposti</label>
+    <input type="Email2" class="form-control" id="email2" placeholder="email2">
+    <label for="email2">Sähköposti</label>
   </div>
 
     <div class="form-group">
@@ -183,17 +187,17 @@
     <br>
   <div class="form-group">
   <div class="form-floating mb-3">
-  <input type="startdate" class="form-control" id="floatingStartdate" placeholder="startdate">
-    <label for="floatingStartdate">Hoidon tarpeen alkamispäivä ( pv. kk . v )</label>
+  <input type="startdate" class="form-control" id="startdate" placeholder="startdate">
+    <label for="startdate">Hoidon tarpeen alkamispäivä ( pv. kk . v )</label>
   </div>
   <div class="form-floating">
-    <input type="days" class="form-control" id="floatingDays" placeholder="days">
-    <label for="floatingDays">Hoitopäivien lukumäärä/kk</label>
+    <input type="dayscount" class="form-control" id="dayscount" placeholder="dayscount">
+    <label for="dayscount">Hoitopäivien lukumäärä/kk</label>
   </div>
 </div>
 <div class="form-floating mb-3">
-    <input type="daily" class="form-control" id="floatingDaily" placeholder="daily">
-    <label for="floatingDaily">Päivittäinen hoitoaika</label>
+    <input type="dailycare" class="form-control" id="dailycare" placeholder="dailycare">
+    <label for="dailycare">Päivittäinen hoitoaika</label>
   </div>
 
 
@@ -202,8 +206,8 @@
 
   <strong><h4>Perheen muut lapset</h4></strong>
   <div class="form-group">
-      <label for="family" class="form-label mt-3">Kotona asuvien alle 18-vuotiaiden lasten nimet, syntymäajat sekä alle kouluikäisten päivähoitopaikat:</label>
-      <textarea class="form-control" id="family" rows="5"></textarea>
+      <label for="familychildrens" class="form-label mt-3">Kotona asuvien alle 18-vuotiaiden lasten nimet, syntymäajat sekä alle kouluikäisten päivähoitopaikat:</label>
+      <textarea class="form-control" id="familychildrens" rows="5"></textarea>
     </div>
     
 
@@ -211,27 +215,24 @@
 
 
   <strong><h4>Lapsen terveydentila</h4></strong>
-    <p>Saako tarvittaessa olla yhteydessä päivähoidon eri yhteistyötahojen (kuten neuvolan) kanssa lapsen kehitystä ja terveyttä koskevissa asioissa:</p>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Kyllä
-        </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Ei
-        </label>
-      </div>
+  <br>
+    <div class="form-group">
+      <label for="becontacted" class="form-label mt-4">Saako tarvittaessa olla yhteydessä päivähoidon eri yhteistyötahojen (kuten neuvolan) kanssa lapsen kehitystä ja terveyttä koskevissa asioissa:</label>
+      <select class="form-select" id="becontacted" name="becontacted">
+        <option selected disabled>Valitse</option>
+        <option value="yes">Kyllä</option>
+        <option value="no">Ei</option>
+      </select>
+    </div>
+  </div>
 
 
   <br>
 
 
     <div class="form-floating mb-3">
-    <input type="hospital" class="form-control" id="floatingHospital" placeholder="hospital">
-    <label for="floatingHospital">Mitä lastenneuvolaa olette viimeksi käyttänyt, osoite</label>
+    <input type="hospital" class="form-control" id="hospital" placeholder="hospital">
+    <label for="hospital">Mitä lastenneuvolaa olette viimeksi käyttänyt, osoite</label>
   </div>
 
 
@@ -273,9 +274,18 @@
   <br><br>
 
   <div class="d-grid gap-2">
-  <button class="btn btn-lg btn-secondary" type="button">Lähetä</button>
+  
+  <button type="submit" class="btn btn-lg btn-secondary">Lähetä</button>
+
+  </fieldset>
+</form>
+
 </div>
 </div>
+
+<script type="text/javascript" src="js/kindergarten.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 
 <?php include_once 'layout/bot.inc.php'; ?>
