@@ -18,17 +18,17 @@ function infoApplication(event){
     const lastname2  = document.forms['kinderGarten']['lastname2'].value;
     const career = document.forms['kinderGarten']['career'].value;
     const job = document.forms['kinderGarten']['job'].value;
-    const phonenumber = document.forms['kinderGarten']['phonenumber'].value;
+    const parentphonenumber = document.forms['kinderGarten']['parentphonenumber'].value;
     const jobhours = document.forms['kinderGarten']['jobhours'].value;
-    const email = document.forms['kinderGarten']['email'].value;
+    const parentemail = document.forms['kinderGarten']['parentemail'].value;
 
     const firstname3 = document.forms['kinderGarten']['firstname3'].value;
     const lastname3  = document.forms['kinderGarten']['lastname3'].value;
     const career2 = document.forms['kinderGarten']['career2'].value;
     const job2 = document.forms['kinderGarten']['job2'].value;
-    const phonenumber2 = document.forms['kinderGarten']['phonenumber2'].value;
+    const parentphonenumber2 = document.forms['kinderGarten']['parentphonenumber2'].value;
     const jobhours2 = document.forms['kinderGarten']['jobhours2'].value;
-    const email2 = document.forms['kinderGarten']['email2'].value;
+    const parentemail2 = document.forms['kinderGarten']['parentemail2'].value;
 
     const relationship = document.forms['kinderGarten']['relationship'].value;
     
@@ -42,35 +42,6 @@ function infoApplication(event){
     const allergic = document.forms['kinderGarten']['allergic'].value;
     const hospital2 = document.forms['kinderGarten']['hospital2'].value;
     const extrainfo = document.forms['kinderGarten']['extrainfo'].value;
-
-    const inputs = document.querySelectorAll('.to-db');
-
-    let postData =''
-    inputs.forEach(function(input){
-        postData += `${input.id}&${input.value}`
-    })
-
-    const textarea = document.querySelectorAll('.t-area');
-
-    let postData_t =''
-    textarea.forEach(function(textarea){
-        postData_t += `${textarea.id}&${textarea.value}`
-    })
-
-    const select = document.querySelectorAll('.s-choice');
-
-    let postData_p =''
-    select.forEach(function(select){
-        postData_p += `${select.id}&${select.value}`
-    })
-
-
-    console.log(postData);
-    console.log(postData_t);
-    console.log(postData_p);
-
-
-    console.log("Form has been submitted!");
 
 
         let ajax = new XMLHttpRequest();
@@ -86,7 +57,7 @@ function infoApplication(event){
     
         ajax.open("POST", "backend/kindergartenApplication.php", true);
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajax.send(postData, postData_t, postData_p);
+        ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&daycare="+daycare+"&startdate="+startdate+"&dayscount="+dayscount+"&dailycare"+dailycare+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
     }
 
 

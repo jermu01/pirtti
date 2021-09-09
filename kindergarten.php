@@ -12,7 +12,6 @@
 
 <body>
 
-
 <div class="container">
   <div class="jumbotron">
   <a href="applications.php" class="previous">&laquo; Takaisin</a>
@@ -97,16 +96,16 @@
     <label for="job">Nykyinen työ-/opiskelupaikka</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="phonenumber" class="form-control to-db" id="phonenumber" placeholder="phonenumber">
-    <label for="phonenumber">Puhelinnumero</label>
+    <input type="parentphonenumber" class="form-control to-db" id="parentphonenumber" placeholder="parentphonenumber">
+    <label for="parentphonenumber">Puhelinnumero</label>
   </div>
   <div class="form-floating mb-3">
     <input type="jobhours" class="form-control to-db" id="jobhours" placeholder="jobhours">
     <label for="jobhours">Työaika esim. (6:00-18:00) </label>
   </div>
 <div class="form-floating mb-3">
-    <input type="email" class="form-control to-db" id="email" placeholder="email">
-    <label for="email">Sähköposti</label>
+    <input type="parentemail" class="form-control to-db" id="parentemail" placeholder="parentemail">
+    <label for="parentemail">Sähköposti</label>
   </div>
 
 
@@ -134,16 +133,16 @@
     <label for="job2">Nykyinen työ-/opiskelupaikka</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="phonenumber2" class="form-control to-db" id="phonenumber2" placeholder="phonenumber2">
-    <label for="phonenumber2">Puhelinnumero</label>
+    <input type="parentphonenumber2" class="form-control to-db" id="parentphonenumber2" placeholder="parentphonenumber2">
+    <label for="parentphonenumber2">Puhelinnumero</label>
   </div>
   <div class="form-floating mb-3">
     <input type="jobhours2" class="form-control to-db" id="jobhours2" placeholder="jobhours2">
     <label for="jobhours2">Työaika esim. (6:00-18:00) </label>
   </div>
 <div class="form-floating mb-3">
-    <input type="Email2" class="form-control to-db" id="email2" placeholder="email2">
-    <label for="email2">Sähköposti</label>
+    <input type="parentemail2" class="form-control to-db" id="parentemail2" placeholder="parentemail2">
+    <label for="parentemail2">Sähköposti</label>
   </div>
 
     <div class="form-group">
@@ -219,7 +218,7 @@
     <div class="form-group">
       <label for="becontacted" class="form-label mt-4">Saako tarvittaessa olla yhteydessä päivähoidon eri yhteistyötahojen (kuten neuvolan) kanssa lapsen kehitystä ja terveyttä koskevissa asioissa:</label>
       <select class="form-select s-choice" id="becontacted" name="becontacted">
-        <option selected disabled>Valitse</option>
+      <option selected disabled>Valitse</option>
         <option value="yes">Kyllä</option>
         <option value="no">Ei</option>
       </select>

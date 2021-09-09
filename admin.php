@@ -1,33 +1,87 @@
 
+<?php session_start(); ?>
+<?php
+if (!isset($_SESSION['logged_in'])){
+  header('Location: login.php');
+  die();
+}
+?>
+
 <title> Päiväkoti Pirtti | Admin </title>
 
 <head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="css/admin/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 </head>
+
+<style>
+body {
+    background-image: url(img/bg.jpg);
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    align-items:center;
+    justify-content: center;
+
+    position:absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+</style>
 <body>
 
+<div class="container">
+  <div class="jumbotron" style="text-align: center;">
+  <h1 class="display-3">Admin page</h1>
+    <?php if (isset($_SESSION['logged_in'])): ?>
+    <strong><p>Tervetuloa!
+      <br>
+      <?php echo $_SESSION['username']; ?></p></strong>
+    <?php endif; ?>
 
-<div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Päiväkoti Pirtti ry Admin page</h3>
-                    
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Your Password" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
-                        </div>
-                        <div class="form-group">
-                            <a href="forgotpassword.php" class="btnForgetPwd">Forget Password?</a>
-                        </div>
-                    <div>
-            </div>
+    <div class="list-group">
+    <a href="registerAdmin.php" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Luo Käyttäjä</h5>
+    </div>
+    <p class="mb-1">Uuden käyttäjän luonti</p>
+  </a>
+
+  <a href="forgotpwd/reset-password.php" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Vaihda salasana</h5>
+    </div>
+    <p class="mb-1">Salasanan vaihto</p>
+  </a>
+
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Gallery</h5>
+    </div>
+    <p class="mb-1">Kuvien lisääminen</p>
+  </a>
+
+</div>
+
+    
+      
+<br><br>
+<button type="button" class="btn btn-danger"><a href="logout.php">Log Out</button></a>
+</div>
+
 </body>
-</html>
+
+
+<?php include_once 'layout/bot.inc.php'; ?>
