@@ -1,10 +1,9 @@
-<?php include_once 'layout/top.inc.php'; ?>
-<?php include_once 'layout/nav.inc.php'; ?>
+<?php include_once '../layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Tietoja</title>
 
 <head>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -40,4 +39,4 @@
 
 </body>
 
-<?php include_once 'layout/bot.inc.php'; ?>
+<?php include_once '../layout/bot.inc.php'; ?>

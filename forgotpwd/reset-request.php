@@ -7,13 +7,13 @@ if (isset($_POST["reset-request-submit"])) {
 
     $url = "https://localhost/pirtti/forgotpwd/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
 
-    $expires = date("U") + 1800;
+    $expires = date("U") + 180;
 
     require 'db.php';
 
     $userEmail = $_POST["email"];
 
-    $sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
+    $sql = "DELETE FROM pwdreset WHERE pwdResetEmail=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error!";
@@ -23,7 +23,7 @@ if (isset($_POST["reset-request-submit"])) {
         mysqli_stmt_execute($stmt);
     }
 
-    $sql = "INSERT INTO pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
+    $sql = "INSERT INTO pwdreset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         echo "There was an error!";
@@ -39,13 +39,13 @@ if (isset($_POST["reset-request-submit"])) {
 
     $to = $userEmail;
 
-    $subject = 'Vaihda salasanasi Päiväkoti Pirrti ry';
+    $subject = 'Change your password for Päiväkoti Pirrti ry.';
 
-    $message = '<p>Salasanan vaihtamaminen. Linkin avulla voit valita uuden salasanan. Jos et yrittänyt vaihtaa salasanaa voit jättää huomioimatta tämän viestin.</p>';
-    $message .= '<p>Linkki salasanan vaihtamiseen: </br>';
+    $message = '<p>Password reset link with link you can reset and choice new password if you didnt tried change your password, you can ignore this mail.</p>';
+    $message .= '<p>Link for reset your password: </br>';
     $message .= '<a href="' . $url . '">' . $url . '</a></p>';
 
-    $headers = "From: paivahoitohakemus@pirtti.com>\r\n";
+    $headers = "From: paivahoitohakemus@pirtti.com\r\n";
 	$headers .= "Reply-To: noreply@pirtti.com\r\n";
     $headers .= "Content-type: text/html\r\n";
 
@@ -54,5 +54,5 @@ if (isset($_POST["reset-request-submit"])) {
     header("Location: reset-password.php?reset=success");
 
 } else {
-    header("Location: login.php");
+    header("Location: ../admin/login.php");
 }

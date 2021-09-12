@@ -30,7 +30,7 @@ function registerNewUser(event){
 
     }
 
-    ajax.open("POST", "backend/registerNewAdmin.php", true);
+    ajax.open("POST", "../backend/registerNewAdmin.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("username="+username+"&password="+password+"&email="+email);
 }

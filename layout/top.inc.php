@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <style>
 
 
@@ -43,7 +44,7 @@
 <body>
     <nav>
         <ul>
-            <a href="mainpage.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
+            <a href="homepage.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
             <a href="info.php" class="btn btn-secondary btn-lg" role="button"><i class="fa fa-info"></i> Tietoja</button></a>
             <a href="contacts.php" class="btn btn-info btn-lg" role="button"><i class="fa fa-phone"></i> Yhteistiedot</button></a>
             <div class="dropdown">
@@ -54,11 +55,10 @@
             <a href="service_voucher.php">Palvelusetelihakemus</a>
         </div>
     </div>
-        <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Kuvat</button></a>
-        <ul>
-    <nav>
+        <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Galleria</button></a>
+      </ul>
+    </nav>
 </div>
 
-    
-</head>
+
 </body>

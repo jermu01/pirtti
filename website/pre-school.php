@@ -1,12 +1,11 @@
-<?php include_once 'layout/top.inc.php'; ?>
-<?php include_once 'layout/nav.inc.php'; ?>
+<?php include_once '../layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Päiväkotihakemus</title>
 
 <head>
 <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="js/main.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="text/javascript" src="../js/main.js"></script>
 </head>
 
 <style>
@@ -277,6 +276,6 @@
 
 </div>
 </div>
-<?php include_once 'layout/bot.inc.php'; ?>
+<?php include_once '../ layout/bot.inc.php'; ?>
 </body>
 

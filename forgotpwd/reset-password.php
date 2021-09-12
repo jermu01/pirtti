@@ -34,7 +34,7 @@ body {
 
   <div class="container">
   <div class="jumbotron">
-  <a href="../admin.php" class="previous">&laquo; Takaisin</a>
+  <a href="../admin/admin.php" class="previous">&laquo; Takaisin</a>
 
   <br><br>
 

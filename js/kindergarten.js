@@ -48,16 +48,16 @@ function infoApplication(event){
         ajax.onload = function(){
             const data = JSON.parse(this.responseText);
             if (data.hasOwnProperty('success')) {
-                window.location.href = "doneApplication.php?type=Hakemus otettu vastaan!";
+                window.location.href = "doneApplication.php?type=success&msg=Hakemuksesi on lähetetty!!";
             } else {
                 showMessage('error');
             }
     
         }
     
-        ajax.open("POST", "backend/kindergartenApplication.php", true);
+        ajax.open("POST", "../backend/kindergartenApplication.php", true);
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&daycare="+daycare+"&startdate="+startdate+"&dayscount="+dayscount+"&dailycare"+dailycare+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
+        ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&daycare="+daycare+"&startdate="+startdate+"&dayscount="+dayscount+"&dailycare="+dailycare+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
     }
 
 

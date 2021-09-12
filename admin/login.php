@@ -1,14 +1,4 @@
-
-<?php session_start(); ?>
-<?php
-if (!isset($_SESSION['logged_in'])){
-  header('Location: login.php');
-  die();
-}
-?>
-
-
-<title> Päiväkoti Pirtti | Käyttäjän luonti </title>
+<title> Päiväkoti Pirtti | Admin </title>
 
 <head>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -16,15 +6,14 @@ if (!isset($_SESSION['logged_in'])){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
 </head>
-<body>
 
 <style>
 body {
-    background-image: url(img/bg.jpg);
+    background-image: url(../img/bg.jpg);
 }
 
 .container {
-    max-width: 700px;
+    width: 700px;
     margin: auto;
     align-items:center;
     justify-content: center;
@@ -35,47 +24,51 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
-
 }
+
 
 </style>
 
-<body>
+<div class="container">
 
-  <div class="container">
 
-  <div id="msg" class="alert alert-dismissible alert-warning d-none">
+<div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading">Warning!</h4>
     <p class="mb-0"></a></p>
   </div>
 
-  <div class="jumbotron">
-  <a href="admin.php" class="previous">&laquo; Takaisin</a>
-  <br><br>
-  <form name="register">
+<div class="jumbotron">
+
+<form name="login">
       <fieldset>
-        <legend>Luo uusi käyttäjä</legend>
+        <legend>Login</legend>
         <div class="form-group">
           <label for="username">Username</label>
-          <input name="username" type="username" class="form-control" placeholder="Käyttäjätunnus">
+          <input name="username" type="text" class="form-control" placeholder="Username">
           </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input name="password" type="password" class="form-control" id="password" placeholder="Salasana">
+          <input name="password" type="password" class="form-control" placeholder="Password">
         </div>
-        <div class="form-group">
-        <label for="email">Sähköposti</label>
-          <input name="email" type="email" class="form-control" id="email" placeholder="Sähköposti">
-        </div>
-        <button type="submit" class="btn btn-primary">Uusi käyttäjä</button>
+        <p><a href="../forgotpwd/reset-password.php">Unohtuiko salasana?</a></p>
+
+        <button type="submit" class="btn btn-primary">Login</button>
       </fieldset>
     </form>
+  
+    <?php
+    if (isset($_GET["newpwd"])) {
+      if ($_GET["newpwd"] == "passwordupddated") {
+        echo '<strong><p class="alert alert-dismissible alert-warning d-none">Salasana on vaihdettu!!</p></strong>';
+      }
+    }
+?>
+
 </div>
-</div>
 
-<script src="js/registerAdmin.js"></script>
-<script src="js/common.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/common.js"></script>
 
-</body>
 
+<?php include_once '../layout/bot.inc.php'; ?>

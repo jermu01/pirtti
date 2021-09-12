@@ -9,20 +9,19 @@ if (!isset($_POST['parentemail']) || !isset($_POST['hash'])){
   die();
 }
    
-  $parentemail = $_GET['parentemail']); 
-  $hash = $_GET['hash']);
+  $parentemail = $_GET['parentemail']; 
+  $hash = $_GET['hash'];
 
   include_once 'db.php';
 
 try {
-        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten WHERE parentemail = :parentemail AND hash = :hash");
+        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_application WHERE parentemail = :parentemail AND hash = :hash");
         $stmt->bindParam(':parentemail', $parentemail);
         $stmt->bindParam(':hash', $hash);
 
         if ($stmt->execute() == false){
           $data['error'] = 'Error occured!';
         } else {
-          
           $result = $stmt->fetch(PDO::FETCH_ASSOC);
           $data = $result;
         }
@@ -31,15 +30,14 @@ try {
           'error' => 'Tapahtui joku virhe!!'
         );
     }
-
-        $stmt = $conn->prepare("DELETE FROM kindergarten WHERE hash = :hash");
+    try{
+        $stmt = $conn->prepare("DELETE FROM kindergarten_application WHERE hash = :hash");
         $stmt->bindParam('hash', $hash);
         if ($stmt->execute() == false){
           $data = array(
               'error' => 'Error occured!'
           );
       } else {
-          $data = array(
             echo "Hakemus kuitattu luetuksi";
             $to      = $email;
             $subject = ' Päivähoitohakemus on luettu!';
@@ -56,7 +54,6 @@ try {
             ';
             $headers = 'Päivähoitohakemus | Pirtti' . "\r\n";
             mail($to, $subject, $message, $headers);
-          );
       }
   
   } catch (PDOException $e) {
