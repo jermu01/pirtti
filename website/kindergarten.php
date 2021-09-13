@@ -9,9 +9,7 @@
 </head>
 
 <style>
-.btn {
-  width: 250px;
-}
+
 
 p {
   color: red;
@@ -30,7 +28,7 @@ p {
     <fieldset>
     <h1>Varhaiskasvatushakemus</h1>
     <br>
-    <p>HUOM! * merkityt on pakollisia</p>
+    <p>HUOM! * merkityt on pakollisia tietoja!</p>
     <br>
     <strong><h4>Lapsen henkilötiedot</h4></strong>
     <br>
@@ -135,6 +133,12 @@ p {
     <label for="parentemail2">Sähköposti</label>
   </div>
 
+
+    <br><br>
+
+
+  <h4>Vanhempiensuhde</h4>
+  <br>
   <div class="form-floating mb-3">
     <input type="relationship" class="form-control to-db" id="relationship" placeholder="relationship" required>
     <label for="relationship">Perhesuhde (avioliitossa/eronnut jne.)*</label>
