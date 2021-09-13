@@ -4,7 +4,6 @@ $db_username = "root";
 $db_password = "";
 $dbname = "pirtti_db";
 
-$http_host = "http://localhost/pirtti/backend/";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $db_username, $db_password);

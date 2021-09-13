@@ -15,7 +15,7 @@ if (!isset($_POST['parentemail']) || !isset($_POST['hash'])){
   include_once 'db.php';
 
 try {
-        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_application WHERE parentemail = :parentemail AND hash = :hash");
+        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_applications WHERE parentemail = :parentemail AND hash = :hash");
         $stmt->bindParam(':parentemail', $parentemail);
         $stmt->bindParam(':hash', $hash);
 
@@ -30,8 +30,9 @@ try {
           'error' => 'Tapahtui joku virhe!!'
         );
     }
-    try{
-        $stmt = $conn->prepare("DELETE FROM kindergarten_application WHERE hash = :hash");
+
+try {
+        $stmt = $conn->prepare("DELETE FROM kindergarten_applications WHERE hash = :hash");
         $stmt->bindParam('hash', $hash);
         if ($stmt->execute() == false){
           $data = array(
@@ -55,12 +56,12 @@ try {
             $headers = 'Päivähoitohakemus | Pirtti' . "\r\n";
             mail($to, $subject, $message, $headers);
       }
-  
-  } catch (PDOException $e) {
+
+    } catch (PDOException $e) {
       $data = array(
           'error' => 'Tapahtui joku virhe!!'
-      );
-  }
+        );
+    }
 
 
 ?>

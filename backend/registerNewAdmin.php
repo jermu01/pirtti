@@ -18,6 +18,7 @@ try {
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':password', $password);
     $stmt->bindParam(':email', $email);
+    
     if($stmt->execute() == false){
         $data = array(
             'error' => 'Tapahtui joku virhe tallennuksessa!'

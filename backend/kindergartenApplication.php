@@ -42,7 +42,6 @@
 	$hospital2 = $_POST['hospital2'];
 	$extrainfo = $_POST['extrainfo'];
 
-
 	$message =
 				"Lapsen etunimet: $firstname"
 	.PHP_EOL.	"Lapsen sukunimi:   $lastname"
@@ -96,40 +95,42 @@
 				"Älä vastaa tähän viestiin!"
 	.PHP_EOL. PHP_EOL. PHP_EOL.
 
+	$url = "https://localhost/pirtti/backend/kindergarten_verify.php?email=$parentemail&hash=$hash";
 
-	$message = PHP_EOL. "Kuittaa hakemus luetuksi: " . $http_host  ."kindergarten_verify.php?email=$parentemail&hash=$hash";
+	$hash = ($parentemail.$parentphonenumber.$date);
 
-	
+try {
+		$stmt = $conn->prepare("INSERT INTO kindergarten_applications (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);");
+		$stmt->bindParam(':parentemail', $parentemail);
+		$stmt->bindParam(':parentphonenumber', $parentphonenumber);
+		$stmt->bindParam(':date', $date);
+		$stmt->bindParam(':hash', $hash);
 
-	try {
-			$stmt = $conn->prepare("INSERT INTO kindergarten_applications (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);");
-			$stmt->bindParam(':parentemail', $parentemail);
-			$stmt->bindParam(':parentphonenumber', $parentphonenumber);
-			$stmt->bindParam(':date', $date);
-			$stmt->bindParam(':hash', $hash);
-
-			if($stmt->execute() == false){
-				$data = array(
-					'error' => 'Tapahtui joku virhe tallennuksessa!'
-				);
-			} else {
-				$data = array(
-					$hash = md5($parentemail, $parentphonenumber, $date
-					
-				);
-			}
-		
-		} catch (PDOException $e) {
+		if($stmt->execute() == false){
 			$data = array(
-				'error' => 'Tapahtui joku virhe!!'
+				'error' => 'Failed!'
+			);
+		} else {
+			$data = array(
+				'success' => 'Success!'
 			);
 		}
+	} catch (PDOException $e) {
+		$data = array(
+			'error' => 'Tapahtui joku virhe!!'
+		);
+	}
 
 
-$headers = 'From: paivahoitohakemus@pirtti.com' . "\r\n" .
-'Reply-To: noreply@pirtti.com' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
-mail('jermu.karjalainen@gmail.com', 'Paivahoitohakemus | Pirtti',$message, $headers);
-echo "Varhaiskasvatushakemus lähetetty!";
+	$headers = 'From: paivahoitohakemus@pirtti.com' . "\r\n" .
+	'Reply-To: noreply@pirtti.com' . "\r\n" .
+	'X-Mailer: PHP/' . phpversion();
+mail('jermu.karjalainen@gmail.fi', 'Paivahoitohakemus | Pirtti',$message, $headers);
+echo "Päivähoitohakemus lähetetty!";
+header( "Refresh:1; url=../website/doneApplication.php", true, 5);
 
+
+
+
+header("Content-type: application/json;charset=utf-8");
 echo json_encode($data);
