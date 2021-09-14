@@ -7,7 +7,7 @@ $data = array();
 $hash = $_GET['hash'];
 
 try {
-        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_applications WHERE parentemail = :parentemail AND hash = :hash");
+        $stmt = $conn->prepare("SELECT parentemail, hash FROM preschool_application WHERE parentemail = :parentemail AND hash = :hash");
         $stmt->bindParam(':parentemail', $parentemail);
         $stmt->bindParam(':hash', $hash);
 
@@ -24,7 +24,7 @@ try {
     }
 
 try {
-        $stmt = $conn->prepare("DELETE FROM kindergarten_applications WHERE hash = :hash");
+        $stmt = $conn->prepare("DELETE FROM preschool_application WHERE hash = :hash");
         $stmt->bindParam('hash', $hash);
         if ($stmt->execute() === false){
           $data = array(
@@ -36,10 +36,10 @@ try {
           );
 
             $to      = $parentemail;
-            $subject = ' Päivähoitohakemus on luettu!';
+            $subject = ' Esikouluhakemus on luettu!';
             $message = '
             Hei!
-            Jättämänne päivähoitohakemus on kuitattu luetuksi.
+            Jättämänne Esikouluhakemus on kuitattu luetuksi.
             -----------------------
             Päiväkotiyhdistys Pirtti ry
             Puh. 0440 214 297

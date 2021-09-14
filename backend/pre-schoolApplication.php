@@ -30,10 +30,8 @@
 
 	$relationship = $_POST['relationship'];
 
-    $daycare = $_POST['daycare'];
-	$startdate = $_POST['startdate'];
-    $dayscount = $_POST['dayscount'];
-	$dailycare = $_POST['dailycare'];
+    $needcare = $_POST['needcare'];
+    $transport = $_POST['transport'];
 	$familychildrens = $_POST['familychildrens'];
 	$becontacted = $_POST['becontacted'];
 	$hospital = $_POST['hospital'];
@@ -45,7 +43,7 @@
 
 
 	$to = $parentemail;
-	$subject = 'Varhaiskasvatushakemuksen tiedot';
+	$subject = 'Esikouluhakemuksen tiedot';
 
 	$message =
 	"Lapsen etunimet: $firstname" . "\r\n" .
@@ -72,13 +70,13 @@
 	"Puolison puhelinnumero:   $parentphonenumber2" . "\r\n" .
 	"Puolison työaika:   $jobhours2" . "\r\n" .
 	"Puolison sähköposti:   $parentemail2" . "\r\n" .
+    "\r\n" .
+
 	"Perhesuhde:   $relationship" . "\r\n" .
 	"\r\n" .
 	
-	"Toivottu päivähoitomuoto:   $daycare" . "\r\n" .
-	"Toivottu alkamispäivä:   $startdate" . "\r\n" .
-	"Hoitopäivien lukumäärä/kk:   $dayscount" . "\r\n" .
-	"Päivittäinen hoitoaika:   $dailycare" . "\r\n" .
+	"Varhaiskasvatuksen tarve:   $needcare" . "\r\n" .
+	"Kuljetuksen tarve:   $transport" . "\r\n" .
 	"\r\n" .
 
 	"Kotona asuvien alle 18-vuotiaiden lasten nimet, syntymäajat sekä alle kouluikäisten päivähoitopaikat:   $familychildrens" . "\r\n" .
@@ -91,7 +89,7 @@
 	"Lisätiedot hakemuksen perusteeksi:   $extrainfo" . "\r\n" .
 	"\r\n" .
 
-	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?email=$parentemail&hash=$hash" . "\r\n" .
+	"Kuittaa hakemus luetuksi: ". $url ."pre-school_verify.php?email=$parentemail&hash=$hash" . "\r\n" .
 	"\r\n" .
 
 	"Älä vastaa tähän viestiin!". "\r\n" .
@@ -103,7 +101,7 @@
 	
 
 try {
-		$stmt = $conn->prepare("INSERT INTO kindergarten_applications (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);");
+		$stmt = $conn->prepare("INSERT INTO preschool_application (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);");
 		$stmt->bindParam(':parentemail', $parentemail);
 		$stmt->bindParam(':parentphonenumber', $parentphonenumber);
 		$stmt->bindParam(':hash', $hash);

@@ -60,14 +60,14 @@ body {
     <?php endif; ?>
 
     <div class="list-group">
-    <a href="registerAdmin.php" class="list-group-item list-group-item-action flex-column align-items-start">
+    <a href="newUser.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Luo Käyttäjä</h5>
     </div>
     <p class="mb-1">Uuden käyttäjän luonti</p>
   </a>
 
-  <a href="../forgotpwd/reset-password.php" class="list-group-item list-group-item-action flex-column align-items-start">
+  <a href="../forgotpwd/loggedpwdreset.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Vaihda salasana</h5>
     </div>

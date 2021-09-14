@@ -25,7 +25,7 @@ body {
 <style>
 
 .zoom {
-  padding: 50px;
+  padding: 100px;
   transition: transform .2s;
   width: 50px;
   height: 50px;

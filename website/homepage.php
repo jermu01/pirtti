@@ -17,7 +17,7 @@
     <br><br>
     Päiväkodissa annetaan myös esiopetussuunnitelman mukaista esiopetusta.
     <br><br>
-    Päiväkodissamme on käytössä yksityisen päiväkotihoidon palveluseteli. Perhe hakee seteliä Mikkelin kaupungilta saatuaan varmistuksen päivähoitopaikan myöntämisestä. Varhaiskasvatuksen asiakasmaksut määräytvät <a href="https://www.oppiminen.mikkeli.fi/varhaiskasvatus-ja-esiopetus/varhaiskasvatuksen-asiakasmaksut/">kaupungin määritelemien maksumääritysperusteiden</a> mukaan. Kaupungin määrittelemään hoitomaksuun lisätään yksityisen päiväkotihoidon omavastuulisä, joka on kokopäivähoidossa olevilta lapsilta 30 e/kk.
+    Päiväkodissamme on käytössä yksityisen päiväkotihoidon palveluseteli. Perhe hakee seteliä Mikkelin kaupungilta saatuaan varmistuksen päivähoitopaikan myöntämisestä. Varhaiskasvatuksen asiakasmaksut määräytvät <a href="https://www.oppiminen.mikkeli.fi/varhaiskasvatus-ja-esiopetus/varhaiskasvatuksen-asiakasmaksut/" target="_blank">kaupungin määritelemien maksumääritysperusteiden</a> mukaan. Kaupungin määrittelemään hoitomaksuun lisätään yksityisen päiväkotihoidon omavastuulisä, joka on kokopäivähoidossa olevilta lapsilta 30 e/kk.
     <br><br>
     Tällä hetkellä päiväkodissamme on vapaana 2 paikkaa alle 3-vuotiaille lapsille.
     <br><br>

@@ -51,19 +51,11 @@ body {
           <label for="password">Password</label>
           <input name="password" type="password" class="form-control" placeholder="Password">
         </div>
-        <p><a href="../forgotpwd/reset-password.php">Unohtuiko salasana?</a></p>
+        <p><a href="../forgotpwd/pwdforgot.php">Unohtuiko salasana?</a></p>
 
         <button type="submit" class="btn btn-primary">Login</button>
       </fieldset>
     </form>
-  
-    <?php
-    if (isset($_GET["newpwd"])) {
-      if ($_GET["newpwd"] == "passwordupddated") {
-        echo '<strong><p class="alert alert-dismissible alert-warning d-none">Salasana on vaihdettu!!</p></strong>';
-      }
-    }
-?>
 
 </div>
 
