@@ -24,7 +24,7 @@ body {
     position:absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 70px;
     bottom: 0;
     margin: auto;
 }
@@ -80,7 +80,7 @@ input[type="email"]{
           <input name="email" type="email" id="email-id" oninput="checker()" class="form-control" placeholder="Sähköposti">
           <br>
           <div id="icon"></div>
-          <p id="error-msg">Please enter A Valid Email</p>
+          <p id="error-msg">Anna kelvollinen sähköpostiosoite</p>
         </div>
         <button type="submit" class="btn btn-primary">Lähetä salasana pyyntö</button>
       </fieldset>

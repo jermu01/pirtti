@@ -1,4 +1,10 @@
 
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+
 .buttons {
     text-align: center;
 }
@@ -14,19 +20,20 @@ body {
     background-image: url('../img/bg.jpg');
 }
 
+.navbar-links {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
 .navbar-links ul {
     margin: 0;
     padding: 0;
-    display: flex;
-}
-
-.navbar-links li {
-    list-style: none;
 }
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: -0.5rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -38,9 +45,43 @@ body {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
 }
+
+
+@media (max-width: 800px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+
+
 
 
 

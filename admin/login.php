@@ -8,22 +8,33 @@
 </head>
 
 <style>
+
+h3 {
+  text-align: center;
+}
+
 body {
     background-image: url(../img/bg.jpg);
 }
 
 .container {
     width: 700px;
-    margin: auto;
-    align-items:center;
+    align-items: center;
     justify-content: center;
+    text-align: center;
 
-    position:absolute;
+    position: absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 150px;
     bottom: 0;
     margin: auto;
+}
+
+
+.form-control {
+  width: 50%;
+  margin: auto;
 }
 
 
@@ -42,14 +53,16 @@ body {
 
 <form name="login">
       <fieldset>
-        <legend>Login</legend>
+        <strong><h3>Päiväkotiyhdistys Pirtti ry</h3></strong>
+        <br>
+        <legend>Kirjautuminen </legend>
         <div class="form-group">
-          <label for="username">Username</label>
-          <input name="username" type="text" class="form-control" placeholder="Username">
+          <label for="username">Käyttäjätunnus</label>
+          <input name="username" type="text" class="form-control" placeholder="Käyttäjätunnus">
           </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input name="password" type="password" class="form-control" placeholder="Password">
+          <label for="password">Salasana</label>
+          <input name="password" type="password" class="form-control" placeholder="Salasana">
         </div>
         <p><a href="../forgotpwd/pwdforgot.php">Unohtuiko salasana?</a></p>
 

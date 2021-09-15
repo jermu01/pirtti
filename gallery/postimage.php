@@ -69,9 +69,9 @@ form {
 
 
 <div class="jumbotron" style="text-align: center;">
-<h2>Make New Post</h2>
+<h2>Kuvan lataus</h2>
 <br>
-<button class="btn btn-info" onclick="postInfo()">Make Post</button>
+<button class="btn btn-info" onclick="postInfo()">Lataa kuva</button>
 
     <div id="msg" class="alert alert-dismissible alert-warning d-none">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -91,16 +91,16 @@ form {
         <input type="hidden" name="name" value="<?php echo $_SESSION['username']; ?>">
         </div>
         <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" name="title" class="form-control" placeholder="Title">
+          <label for="title">Otsikko</label>
+          <input type="text" name="title" class="form-control" placeholder="Otsikko">
         </div>
         <div class="form-group">
-            <label for="text">Text</label>
-            <textarea class="form-control" name="text" rows="3" placeholder="Text"></textarea>
+            <label for="text">Teksti</label>
+            <textarea class="form-control" name="text" rows="3" placeholder="Teksti"></textarea>
             <br><br>
             <input type="file" name="file" class="btn btn-primary">
             <br><br>
-        <button type="submit" name="insert" class="btn btn-primary">Upload</button>
+        <button type="submit" name="insert" class="btn btn-primary">Julkaise</button>
         </fieldset>
       </form>
     </form>

@@ -32,7 +32,7 @@ body {
     position:absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 70px;
     bottom: 0;
     margin: auto;
 
@@ -57,11 +57,11 @@ body {
       <fieldset>
         <legend>Luo uusi käyttäjä</legend>
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="username">Käyttäjätunnus</label>
           <input name="username" type="username" class="form-control" placeholder="Käyttäjätunnus">
           </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Salasana</label>
           <input name="password" type="password" class="form-control" id="password" placeholder="Salasana">
         </div>
         <div class="form-group">

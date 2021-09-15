@@ -34,7 +34,7 @@ body {
     position:absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 30px;
     bottom: 0;
     margin: auto;
 

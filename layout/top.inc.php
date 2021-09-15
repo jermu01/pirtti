@@ -15,46 +15,20 @@ h1 {
   text-align: center;
 }
 
-ul {
-
-align-items: center;
+.ul {
+  display: left;
 }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 225px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 15px 5px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
 </style>
 
 
-    <h1>Päiväkotiyhdistys Pirtti ry</h1>
 
 <body>
+<h1>Päiväkotiyhdistys Pirtti ry</h1>
+
     <nav class="navbar">
-    <a href="#" class="toggle-button">
+      <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -64,17 +38,20 @@ align-items: center;
             <a href="homepage.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
             <a href="info.php" class="btn btn-secondary btn-lg" role="button"><i class="fa fa-info"></i> Tietoja</button></a>
             <a href="contacts.php" class="btn btn-info btn-lg" role="button"><i class="fa fa-phone"></i> Yhteistiedot</button></a>
-            <div class="dropdown">
             <a href="applications.php" button class="btn btn-success btn-lg"><i class="fa fa-list-alt"></i> Hakemukset</button></a>
-            <div class="dropdown-content" style="left:0;">
-            <a href="kindergarten.php">Varhaiskasvatushakemus</a>
-            <a href="pre-school.php">Esiopetushakemus</a>
-            <a href="service_voucher.php">Palvelusetelihakemus</a>
-        </div>
-    </div>
-        <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Galleria</button></a>
+            <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Galleria</button></a>
         </ul>
       </div>
     </nav>
 </body>
-</html>
+
+<script>
+  
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+</script>
+

@@ -22,7 +22,7 @@ body {
     position:absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 70px;
     bottom: 0;
     margin: auto;
 
