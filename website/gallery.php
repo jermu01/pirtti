@@ -4,6 +4,7 @@
 <title>Päiväkoti Pirtti | Kuvat</title>
 
 <head>
+  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
