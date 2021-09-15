@@ -2,10 +2,7 @@
 
 <title>Päiväkoti Pirtti | Hakemus </title>
 
-<head>
-  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+
 <body>
 <div class="container">
   <div class="jumbotron">

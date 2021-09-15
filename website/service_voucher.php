@@ -3,11 +3,6 @@
 
 <title>Päiväkoti Pirtti | Tietoja</title>
 
-<head>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
-</head>
-
 <style>
 
 .container {
