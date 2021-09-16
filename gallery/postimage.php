@@ -18,10 +18,10 @@ if (!isset($_SESSION['logged_in'])){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
 </head>
 
 <style>
@@ -30,31 +30,22 @@ body {
 }
 
 .container {
-  max-width: 700px;
-  margin: auto;
+  max-width: 500px;
   align-items:center;
   justify-content: center;
 
   position:absolute;
   right: 0;
   left: 0;
-  top: 0;
+  top: 70px;
   bottom: 0;
   margin: auto;
 }
 
-div.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 
 form {
- width: 350px;
- height: 300px;
+ width: 400px;
  margin: auto;
- position: relative;
 }
 
 
@@ -66,24 +57,10 @@ form {
   <div class="jumbotron" style="text-align: center;">
   <a href="../admin/admin.php" class="previous">&laquo; Takaisin</a>
 
+  <h1>Lataa Kuva</h1>
 
+  <br>
 
-<div class="jumbotron" style="text-align: center;">
-<h2>Kuvan lataus</h2>
-<br>
-<button class="btn btn-info" onclick="postInfo()">Lataa kuva</button>
-
-    <div id="msg" class="alert alert-dismissible alert-warning d-none">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <h4 class="alert-heading"></h4>
-        <p class="mb-0"></a></p>
-    </div>
-
-<br><br>
-
-
-<div class="container1">
-<div id="post" style="display:none">
   <form action="upload.php" method="post" enctype="multipart/form-data">
       <fieldset>
       <div class="form-group">
@@ -103,24 +80,7 @@ form {
         <button type="submit" name="insert" class="btn btn-primary">Julkaise</button>
         </fieldset>
       </form>
-    </form>
-</div>
-</div>
+  </div>
 </div>
 
 </body>
-
-
-<script>
-  /* 
-Toggle new post -form 
-*/
-function postInfo() {
-    var x = document.getElementById("post");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-</script>
