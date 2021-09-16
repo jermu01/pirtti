@@ -29,7 +29,7 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-    top: 150px;
+    top: 70px;
     bottom: 0;
     margin: auto;
 }
@@ -69,7 +69,7 @@ body {
         </div>
         <p><a href="../forgotpwd/pwdforgot.php">Unohtuiko salasana?</a></p>
 
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">Kirjaudu</button>
       </fieldset>
     </form>
 

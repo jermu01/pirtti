@@ -91,7 +91,7 @@ body {
 </div>
     
 <br><br>
-<button type="button" class="btn btn-danger"><a href="logout.php">Log Out</button></a>
+<button type="button" class="btn btn-danger"><a href="logout.php">Kirjaudu ulos</button></a>
 </div>
 
 </body>
