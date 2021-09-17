@@ -10,26 +10,29 @@ body {
     background-image: url(../img/bg.jpg);
 }
 
+h1 {
+  text-align: center;
+}
+
 .container {
   text-align: center;
 }
 
 .container div {
   float: left;
-  margin: 10px;
 }
 
-<style>
-
-
-h1 {
-  text-align: center;
+img {
+  padding: 10px;
 }
+
+
+
 </style>
 
 <body>
 <div class="container">
-  <div class="jumbotron" style="text-align: center;">
+  <div class="jumbotron">
     <h1>Kuvia</h1>
     
       <div class="container">

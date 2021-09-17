@@ -14,7 +14,7 @@ include_once '../backend/db.php';
 
     if(isset($_POST['insert'])) {
         $img_name = basename($_FILES['file']['name']);
-        $tar_dir = "../uploads/";
+        $tar_dir = "../img/uploads/";
         $target_file = $tar_dir . $img_name;
         $uploadNow = 1;
 

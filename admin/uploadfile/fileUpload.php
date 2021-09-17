@@ -22,7 +22,7 @@ if (!isset($_SESSION['logged_in'])){
 <style>
 
 body {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../../img/bg.jpg);
 }
 
 .container {
@@ -40,21 +40,47 @@ body {
 
 }
 
+p {
+  color: red;
+}
+
 </style>
 
 <body>
 
 <div class="container">
 <div class="jumbotron" style="text-align: center;">
-<a href="admin.php" class="previous">&laquo; Takaisin</a>
+<a href="../admin.php" class="previous">&laquo; Takaisin</a>
 <br><br>
-<h1>Lataa tiedosto</h1>
+<h2>Lataa Omavalvontasuunnitelma</h2>
 <br>
-<form action="uploadFile.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="button" value="Lataa tiedosto" name="submit">
-</form>
+<strong><p> HUOM!! laita tiedoston nimeksi = "OmavalvontasuunnitelmaPirtti.docx" !!</p></strong>
 
+<form action="uploadFile.php" method="post" enctype="multipart/form-data">
+  <input type="file" class="btn btn-outline-primary" name="fileToUpload" id="fileToUpload">
+  <br><br>
+  <input type="submit" class="btn btn-primary" value="Lataa tiedosto" name="submit">
+</form>
+</div>
+
+<div class="jumbotron" style="text-align: center;">
+
+<h2>Omavalvontasuunnitelma</h2>
+
+<?php
+$path = "files/";
+if ($fh = opendir($path)) {
+  while (($entry = readdir($fh)) !== false) {
+    if ($entry != "." && $entry != "..") {
+      echo $entry . "<br>";
+    }
+  }
+}
+
+?>
+<br>
+<form action="deleteFile.php" method="post"> 
+<input type="submit" class="btn btn-danger" name="delete" value="Poista tiedosto">
+</form>
 
 </body>

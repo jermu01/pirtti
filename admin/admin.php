@@ -45,7 +45,7 @@ body {
 
 <div class="container">
   <div class="jumbotron" style="text-align: center;">
-  <h1 class="display-3">Admin page</h1>
+  <h1 class="display-3">Tiedonhallinta</h1>
 
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -88,7 +88,7 @@ body {
     <p class="mb-1">Kaikki kuvat</p>
   </a>
 
-  <a href="../uploadfile/fileUpload.php" class="list-group-item list-group-item-action flex-column align-items-start">
+  <a href="uploadfile/fileUpload.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Omavalvontasuunnitelma</h5>
     </div>
@@ -98,7 +98,7 @@ body {
 </div>
     
 <br><br>
-<button type="button" class="btn btn-danger"><a href="logout.php">Kirjaudu ulos</button></a>
+<a href="logout.php"><button type="button" class="btn btn-danger">Kirjaudu ulos</button></a>
 </div>
 
 </body>

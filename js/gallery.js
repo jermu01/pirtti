@@ -15,10 +15,10 @@ function getAllPosts(){
   function showPosts(data){
     data.forEach(post => {
       let postHtml = `
-      <strong><div class="zoom" style="max-width: 20rem;"></strong>
+      <strong><div style="max-width: 20rem;"></strong>
           <h4 class="card-title">${post.title}</h4>
           <p class="card-text">${post.text}</p>
-          <img src="../img/uploads/${post.file}" width="200px;"/>
+          <img src="../img/uploads/${post.file}" width="260px;"/>
       </div>`;
       document.getElementById("posts-container").innerHTML += postHtml
     });
