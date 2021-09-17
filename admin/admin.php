@@ -88,6 +88,13 @@ body {
     <p class="mb-1">Kaikki kuvat</p>
   </a>
 
+  <a href="../uploadfile/fileUpload.php" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Omavalvontasuunnitelma</h5>
+    </div>
+    <p class="mb-1">lataa uusi omavalvontasuunnitelma</p>
+  </a>
+
 </div>
     
 <br><br>
