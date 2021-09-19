@@ -12,7 +12,7 @@
     <p>Päiväkodissa annetaan myös esiopetussuunnitelman mukaista esiopetusta.</p>
     <p>Päiväkodissamme on käytössä yksityisen päiväkotihoidon palveluseteli. Perhe hakee seteliä Mikkelin kaupungilta saatuaan varmistuksen päivähoitopaikan myöntämisestä. Varhaiskasvatuksen asiakasmaksut määräytvät <a href="https://www.oppiminen.mikkeli.fi/varhaiskasvatus-ja-esiopetus/varhaiskasvatuksen-asiakasmaksut/" target="_blank">kaupungin määritelemien maksumääritysperusteiden</a> mukaan. Kaupungin määrittelemään hoitomaksuun lisätään yksityisen päiväkotihoidon omavastuulisä, joka on kokopäivähoidossa olevilta lapsilta 30 e/kk.</p>
     <p>Tällä hetkellä päiväkodissamme on vapaana 2 paikkaa alle 3-vuotiaille lapsille.</p>
-    <span style="color: black">Lisätiedot : Päiväkodin johtaja Heli Joensuu <i class="fa fa-phone fa-lg"></i> puh. 0440 214 297 tai <i class="fa fa-envelope-o fa-lg"></i><a href="mailto:pkpirttiry@surffi.fi">pkpirttiry@surffi.fi</a></span>
+    <p>Lisätiedot : Päiväkodin johtaja Heli Joensuu <i class="fa fa-phone fa-lg"></i> puh. 0440 214 297 tai <i class="fa fa-envelope-o fa-lg"></i><a href="mailto:pkpirttiry@surffi.fi">pkpirttiry@surffi.fi</a></p>
   </div>
   <?php include_once '../layout/bot.inc.php'; ?>
 </div>
