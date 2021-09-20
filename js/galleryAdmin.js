@@ -23,7 +23,7 @@ function getAllPosts(){
           <p class="card-text">${post.text}</p>
           <img src="../img/uploads/${post.file}" width="200px;"/>
           <br><br>
-          <button type="button" class="btn btn-danger delete">Delete</button>
+          <button type="button" class="btn btn-danger delete">Poista</button>
       </div>`;
       document.getElementById("posts-container").innerHTML += postHtml
     });
