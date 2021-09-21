@@ -54,7 +54,7 @@ p {
 <br><br>
 <h2>Lataa Omavalvontasuunnitelma</h2>
 <br>
-<strong><p> HUOM!! laita tiedoston nimeksi = "OmavalvontasuunnitelmaPirtti.docx" !!</p></strong>
+<strong><p> HUOM!! laita tiedoston nimeksi = "OmavalvontasuunnitelmaPirtti" !!</p></strong>
 
 <form action="uploadFile.php" method="post" enctype="multipart/form-data">
   <input type="file" class="btn btn-outline-primary" name="fileToUpload" id="fileToUpload">
