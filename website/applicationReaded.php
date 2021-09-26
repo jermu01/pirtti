@@ -6,7 +6,7 @@
 <body>
 <div class="container">
   <div class="jumbotron">
-    <h2>Hyväksytty hakemus!</h2>      
+    <h2>Hyväksyit hakemuksen!</h2>      
     <p>Hakemuksen tekijälle on lähetetty sähköpostia, että hakemus on hyväksytty. </p>
   </div>
   <?php include_once '../layout/bot.inc.php'; ?>

@@ -28,10 +28,10 @@ try {
 
     $to = $email;
 
-    $subject = 'Change your password for Päiväkoti Pirrti ry.';
+    $subject = 'Vaihda salasanasi Päiväkoti Pirrti Admin sivustolle.';
 
-    $message = '<p>Password reset link with link you can reset and choice new password if you didnt tried change your password, you can ignore this mail.</p>';
-    $message .= '<p>Link for reset your password: </br>';
+    $message = '<p>Salasana linkin avulla voit vaihtaa uuden salasanan.</p>';
+    $message .= '<p>Linkki salasanan vaihtamiseen: </br>';
     $message .= '<a href="' . $url . '">' . $url . '</a></p>';
 
     $headers = "From: paivahoitohakemus@pirtti.com\r\n";
