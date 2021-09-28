@@ -54,10 +54,8 @@ p {
 <br><br>
 <h2>Lataa Omavalvontasuunnitelma</h2>
 <br>
-<strong><p> HUOM!! laita tiedoston nimeksi = "OmavalvontasuunnitelmaPirtti" !!</p></strong>
-
 <form action="uploadFile.php" method="post" enctype="multipart/form-data">
-  <input type="file" class="btn btn-outline-primary" name="fileToUpload" id="fileToUpload">
+  <input type="file" class="btn btn-outline-primary" name="fileToUpload" id="fileToUpload" accept=".docx">
   <br><br>
   <input type="submit" class="btn btn-primary" value="Lataa tiedosto" name="submit">
 </form>
@@ -79,8 +77,6 @@ if ($fh = opendir($path)) {
 
 ?>
 <br>
-<form action="deleteFile.php" method="post"> 
-<input type="submit" class="btn btn-danger" name="delete" value="Poista tiedosto">
 </form>
 
 </body>

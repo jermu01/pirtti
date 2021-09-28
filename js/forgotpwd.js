@@ -2,17 +2,13 @@
 document.forms['forgotpwd'].addEventListener('submit', forgotPassword);
 
 function forgotPassword(event){
-
     event.preventDefault();
-
     const email = document.forms['forgotpwd']['email'].value;
 
     if (email.length <= 4) {
         showMessage('error', 'Email minium lenght is 4 characters');
         return;
     }
-
-
 
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
