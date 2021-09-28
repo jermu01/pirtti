@@ -5,7 +5,7 @@ include_once 'db.php';
 $text = $_POST['text'];
 
 try {
-    $stmt = $conn->prepare("UPDATE homepage_text SET text = :text;");
+    $stmt = $conn->prepare("UPDATE homepage_text SET text = :text WHERE id = 1;");
     $stmt->bindParam(':text', $text);
 
     if ($stmt->execute() == false){
