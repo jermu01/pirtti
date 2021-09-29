@@ -20,15 +20,3 @@ function editText(event) {
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("text="+text);
 }
-
-function showMessage(type, msg){
-
-    let msgBox = document.getElementById("msg");
-
-    if (type== 'success') {
-        msgBox.classList.remove('alert-warning');
-        msgBox.classList.remove('alert-danger');
-        msgBox.classList.add('alert-success');
-        msgBox.querySelector('h4').innerHTML = "Success!";
-    }
-}

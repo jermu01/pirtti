@@ -19,6 +19,7 @@ if (!isset($_SESSION['logged_in'])){
   <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/common.js"></script>
 </head>
 
 <style>
@@ -54,7 +55,7 @@ body {
   <h1>Kotisivun Muokkaaminen</h1>
     <textarea id="text" cols="30" rows="20">
   <?php
-  include_once '../../backend/showTextHomePage.php';
+    include_once '../../backend/showTextHomePage.php';
   ?>
   </textarea>
   <br>
