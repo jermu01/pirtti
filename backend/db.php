@@ -2,7 +2,7 @@
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "pirtti_db";
+$dbname = "pirtti";
 
 
 $url = "https://localhost/pirtti/backend/";
