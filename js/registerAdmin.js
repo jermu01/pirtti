@@ -23,7 +23,7 @@ function registerNewUser(event){
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')) {
-            window.location.href = "admin.php?type=success&msg=Uusi käyttäjä luotu!";
+            window.location.href = "login.php?type=success&msg=Rekisteröinti onnistui!! Voit kirjautua sisään uusilla tunniksillasi!";
         } else {
             showMessage('error', data.error);
         }

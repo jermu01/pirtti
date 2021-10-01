@@ -2,7 +2,7 @@
     include_once 'db.php';
 
     try {
-        $stmt = $conn->prepare("SELECT text FROM edit_websites WHERE id = 1;");
+        $stmt = $conn->prepare("SELECT text FROM edit_websites WHERE id = 2;");
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $data = $result[0]["text"];

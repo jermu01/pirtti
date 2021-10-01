@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <?php session_start(); ?>
 
@@ -11,14 +11,16 @@ if (!isset($_SESSION['logged_in'])){
 
 <title>Päiväkoti Pirtti | Sivun Editointi</title>
 
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="../../js/common.js"></script>
 </head>
 
@@ -52,20 +54,19 @@ body {
 <a href="../admin.php" class="previous">&laquo; Takaisin</a>
 
 <form method="POST" name="textEdit">
-  <h1>Kotisivun Muokkaaminen</h1>
-    <textarea id="text" name="text" cols="30" rows="20">
-  <?php
-    include_once '../../backend/showTextHomePage.php';
-  ?>
+  <h1>Tietojasivun Muokkaaminen</h1>
+    <textarea id="text" name="text" class="tinymce" cols="30" rows="20">
+    <?php
+    include_once '../../backend/showTextInfoPage.php';
+    ?>
   </textarea>
+
   <br>
   <button type="submit" class="btn btn-primary">Muokkaa sivu</button>
-  </div>
 </form>
 
-
 <script src="../../tinymce/js/tinymce.min.js"></script>
-<script src="../../js/editHomepage.js"></script>
+<script src="../../js/editInfopage.js"></script>
 
 <script>
 tinymce.init({
@@ -77,6 +78,7 @@ tinymce.init({
 });
 </script>
 
+</div>
 </body>
 </html>
 <?php include_once '../../layout/bot.inc.php'; ?>

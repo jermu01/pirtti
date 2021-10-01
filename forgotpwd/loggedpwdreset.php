@@ -34,9 +34,9 @@ body {
 
 </style>
 
-    <div class="container">
-        <div class="jumbotron">
-            <a href="../admin/admin.php" class="previous">&laquo; Takaisin</a>
+<div class="container">
+<div class="jumbotron">
+    <a href="../admin/admin.php" class="previous">&laquo; Takaisin</a>
 
     <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>

@@ -40,10 +40,6 @@ body {
 
 }
 
-p {
-  color: red;
-}
-
 </style>
 
 <body>
@@ -51,6 +47,13 @@ p {
 <div class="container">
 <div class="jumbotron" style="text-align: center;">
 <a href="../admin.php" class="previous">&laquo; Takaisin</a>
+
+<div id="msg" class="alert alert-dismissible alert-warning d-none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Warning!</h4>
+    <p class="mb-0"></a></p>
+    </div>
+
 <br><br>
 <h2>Lataa Omavalvontasuunnitelma</h2>
 <br>
@@ -79,4 +82,6 @@ if ($fh = opendir($path)) {
 <br>
 </form>
 
+
+<script type="text/javascript" src="../js/common.js"></script>
 </body>

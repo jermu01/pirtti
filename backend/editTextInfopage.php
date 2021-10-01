@@ -5,7 +5,7 @@ include_once 'db.php';
 $text = $_POST['text'];
 
 try {
-    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 1;");
+    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 2;");
     $stmt->bindParam(':text', $text);
 
     if ($stmt->execute() == false){
@@ -22,6 +22,7 @@ try {
         'error' => 'Tapahtui joku virhe!!'
     );
 }
+
 
 header("Content-type: application/json;charset=utf-8");
 echo json_encode($data);

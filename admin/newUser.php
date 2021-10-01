@@ -6,8 +6,6 @@ if (!isset($_SESSION['logged_in'])){
   die();
 }
 ?>
-
-
 <title> Päiväkoti Pirtti | Käyttäjän luonti </title>
 
 <head>
