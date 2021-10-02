@@ -1,6 +1,5 @@
 
 document.forms['textEdit'].addEventListener('submit', editText);
-document.forms['textEdit2'].addEventListener('submit', editText2);
 
 function editText(event) {
     event.preventDefault();
