@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
 	$ext = pathinfo($name, PATHINFO_EXTENSION);
 	$allowed = array('docx');
 		if (!in_array($ext, $allowed)) {
-			echo "Tiedoston on oltava word tiedosto!";
+			header("location: fileUpload.php?type=error&msg=Tiedoston on oltava word tiedosto!!");
 	} else {
 		$files = glob("files/*");
 			foreach($files as $file){

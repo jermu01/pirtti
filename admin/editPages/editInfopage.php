@@ -73,8 +73,8 @@ tinymce.init({
   selector: "#text",
   entity_encoding : "raw",
   plugins: "link, lists, image",
-  toolbar1: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright | outdent | indent | bullist | numlist |',
-  toolbar2: '| link | image |'
+  toolbar1: 'undo redo | styleselect | fontsizeselect | fontselect | bold italic |',
+  toolbar2: 'alignleft aligncenter alignright | bullist | numlist | link | image |'
 });
 </script>
 

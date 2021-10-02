@@ -20,7 +20,7 @@ function loginUsers(event){
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')) {
-            window.location.href = "admin.php?type=success&msg=Welcome!";
+            window.location.href = "admin.php?type=success&msg=Tervetuloa!";
             return;
         } else {
             showMessage('error', 'Kirjautuminen epäonnistui!');
