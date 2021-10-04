@@ -1,5 +1,12 @@
 <?php session_start(); ?>
 
+<?php
+if (!isset($_SESSION['logged_in'])){
+  header('Location: ../admin/login.php');
+  die();
+}
+?>
+
 <title> Päiväkoti Pirtti | Salasanan vaihto </title>
 
 <head>

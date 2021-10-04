@@ -1,11 +1,14 @@
 
 <?php session_start(); ?>
+
 <?php
 if (!isset($_SESSION['logged_in'])){
   header('Location: login.php');
   die();
 }
 ?>
+
+
 <title> Päiväkoti Pirtti | Käyttäjän luonti </title>
 
 <head>
