@@ -1,6 +1,7 @@
 
-
 <title> Päiväkoti Pirtti | Salasanan vaihto </title>
+
+<!-- Password reset. Make new password -->
 
 <head>
     <meta charset="UTF-8">
@@ -35,21 +36,23 @@ body {
 </style>
 
 <?php
-
-    include_once '../backend/db.php';
-    $email = $_GET["email"];
+    include_once '../backend/db.php'; //SQL-Database connection
+    $email = $_GET["email"]; //get email
 ?>
 
-
+<body>
+    
     <div class="container">
+    <div class="jumbotron">
 
+    <!-- display message -->
     <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading">Warning!</h4>
     <p class="mb-0"></a></p>
     </div>
 
-<div class="jumbotron">
+    <!-- resetpwd form -->
     <form name="resetpwd">
         <fieldset>
         <legend>Salasanan vaihtaminen</legend>
@@ -70,6 +73,8 @@ body {
     </form>
 </div>
 
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../js/resetpwd.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 
+</body>

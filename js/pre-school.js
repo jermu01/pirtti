@@ -1,11 +1,11 @@
 
-document.forms['preSchool'].addEventListener('submit', infoApplication);
+document.forms['preSchool'].addEventListener('submit', infoApplication); //add method on submit button
 
 
 function infoApplication(event){
+    event.preventDefault(); //stop form from submitting
 
-    event.preventDefault();
-
+    // input fields from pre-school application
     const firstname = document.forms['preSchool']['firstname'].value;
     const lastname  = document.forms['preSchool']['lastname'].value;
     const identity = document.forms['preSchool']['identity'].value;
@@ -41,35 +41,20 @@ function infoApplication(event){
     const hospital2 = document.forms['preSchool']['hospital2'].value;
     const extrainfo = document.forms['preSchool']['extrainfo'].value;
 
-
-        let ajax = new XMLHttpRequest();
-        ajax.onload = function(){
-            const data = JSON.parse(this.responseText);
-            if (data.hasOwnProperty('success')) {
-                window.location.href = "doneApplication.php?type=success&msg=Hakemuksesi on lähetetty!!";
-            } else {
-                showMessage('error');
-            }
-    
-        }
-    
-        ajax.open("POST", "../backend/pre-schoolApplication.php", true);
-        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&needcare="+needcare+"&transport="+transport+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
+    //ajax request
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+        const data = JSON.parse(this.responseText);
+        if (data.hasOwnProperty('success')) {
+            window.location.href = "doneApplication.php?type=success&msg=Hakemuksesi on lähetetty!!"; //control you in selected page & display message
+        } else {
+            showMessage('error');
+        }   
     }
-
-    function showMessage(type, msg){
-
-        let msgBox = document.getElementById("msg");
     
-        if (type== 'success') {
-            msgBox.classList.remove('alert-danger');
-            msgBox.classList.add('alert-success');
-        } else if(type == 'error') {
-            msgBox.classList.remove('alert-success');
-            msgBox.classList.add('alert-danger');
-        }
-    
-        msgBox.querySelector('p').innerHTML = msg;
-        msgBox.classList.remove('d-none');
-    }
+    //send data
+    ajax.open("POST", "../backend/pre-schoolApplication.php", true); //included SQL-database script
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //fields from form what u want to send
+    ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&needcare="+needcare+"&transport="+transport+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
+}

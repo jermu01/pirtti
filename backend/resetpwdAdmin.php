@@ -1,14 +1,15 @@
 <?php
 
-include_once 'db.php';
+include_once 'db.php'; //database connection
 
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 try {
-    $stmt = $conn->prepare("SELECT username FROM admin_user WHERE username = :username");
-    $stmt->bindParam(':username', $username);
+    $stmt = $conn->prepare("SELECT username FROM admin_user WHERE username = :username"); //SELECT statement
+    $stmt->bindParam(':username', $username); //bindParam variable
 
+    //run stmt
     if ($stmt->execute() == false){
         $data = array(
             'error' => 'Failed!'
@@ -26,10 +27,11 @@ try {
 
 
 try {
-    $stmt = $conn->prepare("UPDATE admin_user SET password = :password WHERE username = :username;");
-    $stmt->bindParam(':password', $password);
-    $stmt->bindParam(':username', $username);
+    $stmt = $conn->prepare("UPDATE admin_user SET password = :password WHERE username = :username;"); //UPDATE statement
+    $stmt->bindParam(':password', $password); //bindParam variable
+    $stmt->bindParam(':username', $username); //bindParam variable
 
+    //run stmt
     if ($stmt->execute() == false){
         $data = array(
             'error' => 'Failed!'

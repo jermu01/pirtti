@@ -1,13 +1,14 @@
 <?php
+
+//database information
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
 $dbname = "pirtti";
 
+$url = "https://localhost/pirtti/backend/"; //mail url
 
-$url = "https://localhost/pirtti/backend/";
-
-
+//database connection
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $db_username, $db_password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

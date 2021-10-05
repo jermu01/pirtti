@@ -1,6 +1,9 @@
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
 <?php
+//check if you`re log in
 if (!isset($_SESSION['logged_in'])){
   header('Location: login.php');
   die();
@@ -8,6 +11,8 @@ if (!isset($_SESSION['logged_in'])){
 ?>
 
 <title> Päiväkoti Pirtti | Tiedoston lisääminen </title>
+
+<!-- Upload file -->
 
 <head>
   <meta charset="UTF-8">
@@ -50,6 +55,7 @@ body {
 
 <br>
 
+<!-- display message -->
 <div id="msg" class="alert alert-dismissible alert-warning d-none">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4 class="alert-heading">Warning!</h4>
@@ -57,8 +63,10 @@ body {
 </div>
 
 <h2>Lataa Omavalvontasuunnitelma</h2>
+
 <br>
 
+<!-- upload form -->
 <form action="uploadFile.php" method="post" enctype="multipart/form-data">
   <input type="file" class="btn btn-outline-primary" name="fileToUpload" id="fileToUpload" accept=".docx">
   <br><br>
@@ -71,6 +79,7 @@ body {
 <h2>Omavalvontasuunnitelma</h2>
 
 <?php
+//display files folder file name
 $path = "files/";
 if ($fh = opendir($path)) {
   while (($entry = readdir($fh)) !== false) {
@@ -84,6 +93,6 @@ if ($fh = opendir($path)) {
 <br>
 </form>
 
-
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../../js/common.js"></script>
 </body>

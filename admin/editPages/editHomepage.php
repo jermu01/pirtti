@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
 <?php
+//check if you`re log in
 if (!isset($_SESSION['logged_in'])){
   header('Location: login.php');
   die();
@@ -10,6 +13,8 @@ if (!isset($_SESSION['logged_in'])){
 ?>
 
 <title>Päiväkoti Pirtti | Sivun Editointi</title>
+
+<!-- Edithomepage -->
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -51,11 +56,12 @@ body {
 
 <a href="../admin.php" class="previous">&laquo; Takaisin</a>
 
+<!-- textEdit form -->
 <form method="POST" name="textEdit">
   <h1>Kotisivun Muokkaaminen</h1>
     <textarea id="text" name="text" cols="30" rows="20">
   <?php
-    include_once '../../backend/showTextHomePage.php';
+    include_once '../../backend/showTextHomePage.php'; //include script what display text in editor from SQL-Database
   ?>
   </textarea>
   <br>
@@ -63,10 +69,11 @@ body {
   </div>
 </form>
 
-
+<!-- Javascript scripts -->
 <script src="../../tinymce/js/tinymce.min.js"></script>
 <script src="../../js/editHomepage.js"></script>
 
+<!-- Tinymce editor pluggins, toolbar etc. -->
 <script>
 tinymce.init({
   selector: "#text",
@@ -79,4 +86,5 @@ tinymce.init({
 
 </body>
 </html>
+<!-- footer -->
 <?php include_once '../../layout/bot.inc.php'; ?>

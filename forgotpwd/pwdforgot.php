@@ -1,6 +1,7 @@
 
-
 <title> Päiväkoti Pirtti | Salasanan vaihto </title>
+
+<!-- Password forget. Request new password with email -->
 
 <head>
     <meta charset="UTF-8">
@@ -66,7 +67,6 @@ input[type="email"]{
 }
 
 </style>
-</head>
 
 <body>
 
@@ -76,6 +76,14 @@ input[type="email"]{
 
   <br><br>
 
+    <!-- display message -->
+    <div id="msg" class="alert alert-dismissible alert-warning d-none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading"></h4>
+    <p class="mb-0"></a></p>
+    </div>
+
+    <!-- forgotpwd form -->
     <form name="forgotpwd">
       <fieldset>
         <legend>Anna Sähköpostisi</legend>
@@ -92,9 +100,9 @@ input[type="email"]{
 </div>
 
 
-<script >
+<script>
 
-
+//email checker if email is valid
 let emailId = document.getElementById("email-id");
 let errorMsg = document.getElementById("error-msg");
 let icon = document.getElementById("icon");
@@ -124,7 +132,8 @@ function checker(){
 
 </script>
 
-
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../js/forgotpwd.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
 
 </body>

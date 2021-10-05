@@ -1,12 +1,12 @@
 <?php
 
-    include_once 'db.php';
+    include_once 'db.php'; //database connection
 
     try {
-        $stmt = $conn->prepare("SELECT * FROM gallery_image");
-        $stmt->execute();
+        $stmt = $conn->prepare("SELECT * FROM gallery_image"); //SELECT statement
+        $stmt->execute(); //stmt run
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $data = $result;
+        $data = $result; //stmt result
 
     } catch (PDOException $e){
         $data = array(

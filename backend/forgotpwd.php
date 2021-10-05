@@ -5,9 +5,10 @@ include_once 'db.php';
 $email = $_POST['email'];
 
 try {
-    $stmt = $conn->prepare("SELECT email FROM admin_user WHERE email = :email");
-    $stmt->bindParam(':email', $email);
+    $stmt = $conn->prepare("SELECT email FROM admin_user WHERE email = :email"); //SELECT statement
+    $stmt->bindParam(':email', $email); //bindParam variable
 
+    //run stmt
     if($stmt->execute() == false){
         $data = array(
             'error' => 'Failed!'
@@ -23,11 +24,13 @@ try {
     );
 }
 
+    //mail
 
-    $url = "https://localhost/pirtti/forgotpwd/pwdreset.php?email=$email";
+    $url = "https://localhost/pirtti/forgotpwd/pwdreset.php?email=$email"; //url to website where u can create new password
 
-    $to = $email;
+    $to = $email; //password reset requester email
 
+    //mail subject & messages
     $subject = 'Vaihda salasanasi Päiväkoti Pirrti Admin sivustolle.';
 
     $message = '<p>Salasana linkin avulla voit vaihtaa uuden salasanan.</p>';
@@ -38,7 +41,7 @@ try {
 	$headers .= "Reply-To: noreply@pirtti.com\r\n";
     $headers .= "Content-type: text/html\r\n";
 
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers); //all information will be sended
 
     header("Content-type: application/json;charset=utf-8");
     echo json_encode($data);

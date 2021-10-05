@@ -1,13 +1,14 @@
 <?php
 
-include_once 'db.php';
+include_once 'db.php'; //database connection
 
 $text = $_POST['text'];
 
 try {
-    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 1;");
-    $stmt->bindParam(':text', $text);
+    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 1;"); //UPDATE statement
+    $stmt->bindParam(':text', $text); //bindParam variable
 
+    //run stmt
     if ($stmt->execute() == false){
         $data = array(
             'error' => 'Failed!'

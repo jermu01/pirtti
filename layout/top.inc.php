@@ -28,12 +28,14 @@ h1 {
 <body>
 <h1>Päiväkotiyhdistys Pirtti ry</h1>
 
+<!-- toggele button for mobile view -->
     <nav class="navbar">
       <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </a>
+        <!-- Buttons -->
       <div class="navbar-links">
         <ul>
             <a href="homepage.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>

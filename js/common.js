@@ -1,3 +1,5 @@
+
+//Display all errors, success messages
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString)
 

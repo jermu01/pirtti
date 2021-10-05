@@ -1,6 +1,6 @@
 <?php
 
-	include_once 'db.php';
+	include_once 'db.php'; //database connection
 
 	$date = time();
 
@@ -39,10 +39,11 @@
 	$hospital2 = $_POST['hospital2'];
 	$extrainfo = $_POST['extrainfo'];
 
-	$hash = md5($parentemail.$parentphonenumber);
+	$hash = md5($parentemail.$parentphonenumber); //hash
 
+	$to = $parentemail;//application creator
 
-	$to = $parentemail;
+	//mail
 	$subject = 'Esikouluhakemuksen tiedot';
 
 	$message =
@@ -97,15 +98,16 @@
 	$headers = 'From: paivahoitohakemus@pirtti.com' . "\r\n" .
 				'Reply-To: noreply@pirtti.com' . "\r\n" .
 				'X-Mailer: PHP/' . phpversion();
-	mail($to, $subject, $message, $headers);
+	mail($to, $subject, $message, $headers); //all information will be sended
 	
 
 try {
-		$stmt = $conn->prepare("INSERT INTO preschool_application (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);");
-		$stmt->bindParam(':parentemail', $parentemail);
-		$stmt->bindParam(':parentphonenumber', $parentphonenumber);
-		$stmt->bindParam(':hash', $hash);
+		$stmt = $conn->prepare("INSERT INTO preschool_application (parentemail, parentphonenumber, date, hash) VALUES (:parentemail, :parentphonenumber,  DATE(NOW()), :hash);"); //INSERT statement
+		$stmt->bindParam(':parentemail', $parentemail); //bindParam variable
+		$stmt->bindParam(':parentphonenumber', $parentphonenumber); //bindParam variable
+		$stmt->bindParam(':hash', $hash); //bindParam variable
 
+		//run stmt
 		if($stmt->execute() == false){
 			$data = array(
 				'error' => 'Failed!'

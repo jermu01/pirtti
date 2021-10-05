@@ -1,8 +1,7 @@
-
+<!-- layout -->
 <?php include_once '../layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Kuvat</title>
-
 
 <style>
 
@@ -26,15 +25,17 @@ img {
   padding: 10px;
 }
 
-
-
 </style>
 
 <body>
+
+<!-- Gallery website where you can see all uploaded images. Images is uploaded in SQL-Database -->
+
 <div class="container">
   <div class="jumbotron">
     <h1>Kuvia</h1>
     
+    <!-- display images -->
       <div class="container">
         <div class="row">
         <div class="card text-center">
@@ -46,6 +47,7 @@ img {
   </div>
 </div>
 
+<!-- Javascript scripts -->
 <script src="../js/gallery.js"></script>
 
 </body>

@@ -1,6 +1,9 @@
 
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
+<!-- check if you are log in or not -->
 <?php
 if (!isset($_SESSION['logged_in'])){
   header('Location: ../login.php');
@@ -10,9 +13,7 @@ if (!isset($_SESSION['logged_in'])){
 
 <title>Päiväkoti Pirtti | Galleria </title>
 
-<head>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+<!-- Upload images. Uploaded images will be saved in SQL-Database and img/uploads folder -->
 
 <head>
   <meta charset="UTF-8">
@@ -22,6 +23,7 @@ if (!isset($_SESSION['logged_in'])){
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <style>
@@ -61,6 +63,7 @@ form {
 
   <br>
 
+  <!-- upload form -->
   <form action="upload.php" method="post" enctype="multipart/form-data">
       <fieldset>
       <div class="form-group">

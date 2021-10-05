@@ -1,21 +1,22 @@
 <?php
 
-include_once 'db.php';
+include_once 'db.php'; //database connection
 
 $data = array();
 
 $hash = $_GET['hash'];
 
-try {
-        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_applications WHERE parentemail = :parentemail AND hash = :hash");
-        $stmt->bindParam(':parentemail', $parentemail);
-        $stmt->bindParam(':hash', $hash);
+  try {
+        $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_applications WHERE parentemail = :parentemail AND hash = :hash"); //SELECT statement
+        $stmt->bindParam(':parentemail', $parentemail); //bindParam variable
+        $stmt->bindParam(':hash', $hash); //bindParam variable
 
+        //run stmt
         if ($stmt->execute() == false){
           $data['error'] = 'Error occured!';
         } else {
           $result = $stmt->fetch(PDO::FETCH_ASSOC);
-          $data = $result;
+          $data = $result; 
         }
     } catch (PDOException $e) {
       $data = array(
@@ -23,9 +24,11 @@ try {
         );
     }
 
-try {
-        $stmt = $conn->prepare("DELETE FROM kindergarten_applications WHERE hash = :hash");
-        $stmt->bindParam('hash', $hash);
+  try {
+        $stmt = $conn->prepare("DELETE FROM kindergarten_applications WHERE hash = :hash"); //DELETE statement
+        $stmt->bindParam('hash', $hash); //bindParam variable
+
+        //run stmt
         if ($stmt->execute() === false){
           $data = array(
             'error' => 'Failed!'
@@ -35,7 +38,8 @@ try {
           'success' => 'Hakemus kuitattu luetuksi!'
           );
 
-            $to      = $parentemail;
+            //mail
+            $to      = $parentemail; //application creator
             $subject = ' Päivähoitohakemus on luettu!';
             $message = '
             Hei!
@@ -51,8 +55,8 @@ try {
             $headers = 'From: paivahoitohakemus@pirtti.com' . "\r\n" .
                         'Reply-To: noreply@pirtti.com' . "\r\n" .
                         'X-Mailer: PHP/' . phpversion();
-            mail($to, $subject, $message, $headers);
-            header("Location: ../website/applicationReaded.php");
+            mail($to, $subject, $message, $headers); //all information will be sended
+            header("Location: ../website/applicationReaded.php"); //control you in new website
       }
 
     } catch (PDOException $e) {

@@ -1,6 +1,9 @@
 
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
+<!-- Check if u are logged in or not -->
 <?php
 if (!isset($_SESSION['logged_in'])){
   header('Location: login.php');
@@ -8,8 +11,9 @@ if (!isset($_SESSION['logged_in'])){
 }
 ?>
 
-
 <title> Päiväkoti Pirtti | Käyttäjän luonti </title>
+
+<!-- Create newuser -->
 
 <head>
   <meta charset="UTF-8">
@@ -20,8 +24,6 @@ if (!isset($_SESSION['logged_in'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.css">
 </head>
-
-
 
 <style>
   
@@ -49,16 +51,19 @@ body {
 <body>
 
   <div class="container">
+    <div class="jumbotron">
+    <a href="admin.php" class="previous">&laquo; Takaisin</a>
 
+  <!-- display message -->
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading">Warning!</h4>
     <p class="mb-0"></a></p>
   </div>
 
-  <div class="jumbotron">
-  <a href="admin.php" class="previous">&laquo; Takaisin</a>
   <br><br>
+
+  <!-- register form -->
   <form name="register">
       <fieldset>
         <legend>Luo uusi käyttäjä</legend>
@@ -77,9 +82,10 @@ body {
         <button type="submit" class="btn btn-primary">Uusi käyttäjä</button>
       </fieldset>
     </form>
-</div>
+  </div>
 </div>
 
+<!-- Javascript scripts -->
 <script src="../js/registerAdmin.js"></script>
 <script src="../js/common.js"></script>
 

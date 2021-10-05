@@ -1,6 +1,6 @@
 <?php
-session_start();
-session_destroy();
-unset($_SESSION);
-header('location: login.php');
+session_start(); //session start
+session_destroy(); //session breaking
+unset($_SESSION); //session end
+header('location: login.php'); //location login.php page
 ?>

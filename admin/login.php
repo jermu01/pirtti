@@ -1,4 +1,7 @@
+
 <title> Päiväkoti Pirtti | Admin </title>
+
+<!-- log in -->
 
 <head>
   <meta charset="UTF-8">
@@ -44,17 +47,17 @@ body {
 </style>
 
 <div class="container">
+  <div class="jumbotron">
 
-
-<div id="msg" class="alert alert-dismissible alert-warning d-none">
+  <!-- display message -->
+  <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading"></h4>
     <p class="mb-0"></a></p>
   </div>
 
-<div class="jumbotron">
-
-<form name="login">
+  <!-- login form -->
+    <form name="login">
       <fieldset>
         <strong><h3>Päiväkotiyhdistys Pirtti ry</h3></strong>
         <br>
@@ -67,6 +70,7 @@ body {
           <label for="password">Salasana</label>
           <input name="password" type="password" class="form-control" placeholder="Salasana">
         </div>
+        <!-- link to pwdforgot -->
         <p><a href="../forgotpwd/pwdforgot.php">Unohtuiko salasana?</a></p>
 
         <button type="submit" class="btn btn-primary">Kirjaudu</button>
@@ -75,8 +79,9 @@ body {
 
 </div>
 
+<!-- Javascript scripts -->
 <script src="../js/login.js"></script>
 <script src="../js/common.js"></script>
 
-
+<!-- footer -->
 <?php include_once '../layout/bot.inc.php'; ?>

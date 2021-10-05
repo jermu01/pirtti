@@ -1,7 +1,7 @@
+<!-- layout -->
 <?php include_once '../layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Esikouluhakemus</title>
-
 
 <style>
 
@@ -10,19 +10,31 @@
   max-width: 900px;
 }
 
-
 p {
   color: red;
 }
 
 </style>
 
+<!-- 
+pre-school application.
+When application is filled, it will automatically send email to kindergarten. From application there will be saved in database following information :
+- parentemail
+- parentphonenumber
+- date
+- hash
+-->
+
+
 <body>
 
 <div class="container">
   <div class="jumbotron">
   <a href="applications.php" class="previous">&laquo; Takaisin</a>
+
   <br><br>
+
+  <!-- preschool form -->
   <form name="preSchool">
     <fieldset>
     <h1>Esiopetushakemus</h1>
@@ -240,9 +252,11 @@ p {
 </div>
 </div>
 
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../js/pre-school.js"></script>
 
 </body>
 
+<!-- Footer -->
 <?php include_once '../layout/bot.inc.php'; ?>
 

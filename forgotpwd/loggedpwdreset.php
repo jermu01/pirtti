@@ -1,5 +1,8 @@
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
+<!-- Check if u are logged in or not -->
 <?php
 if (!isset($_SESSION['logged_in'])){
   header('Location: ../admin/login.php');
@@ -8,6 +11,8 @@ if (!isset($_SESSION['logged_in'])){
 ?>
 
 <title> Päiväkoti Pirtti | Salasanan vaihto </title>
+
+<!-- logged password reset -->
 
 <head>
     <meta charset="UTF-8">
@@ -42,16 +47,18 @@ body {
 </style>
 
 <div class="container">
-<div class="jumbotron">
+    <div class="jumbotron">
     <a href="../admin/admin.php" class="previous">&laquo; Takaisin</a>
 
+    <!-- display message -->
     <div id="msg" class="alert alert-dismissible alert-warning d-none">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">Warning!</h4>
-    <p class="mb-0"></a></p>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Warning!</h4>
+        <p class="mb-0"></a></p>
     </div>
 
 
+    <!-- resetpwd form -->
     <form name="resetpwd">
         <fieldset>
         <legend>Salasanan vaihtaminen</legend>
@@ -72,5 +79,7 @@ body {
     </form>
 </div>
 
+
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../js/resetpwdAdmin.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>

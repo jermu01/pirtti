@@ -1,13 +1,14 @@
 <?php
 
-include_once 'db.php';
+include_once 'db.php'; //database connection
 
 $text = $_POST['text'];
 
 try {
-    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 2;");
-    $stmt->bindParam(':text', $text);
+    $stmt = $conn->prepare("UPDATE edit_websites SET text = :text WHERE id = 2;"); //UPDATE statement
+    $stmt->bindParam(':text', $text); //bindParam variable
 
+    //run stmt
     if ($stmt->execute() == false){
         $data = array(
             'error' => 'Failed!'
@@ -22,7 +23,6 @@ try {
         'error' => 'Tapahtui joku virhe!!'
     );
 }
-
 
 header("Content-type: application/json;charset=utf-8");
 echo json_encode($data);

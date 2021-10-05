@@ -1,6 +1,9 @@
 
-<?php session_start(); ?>
+<?php
+session_start(); //session start
+?>
 
+<!-- Check if u are logged in or not -->
 <?php
 if (!isset($_SESSION['logged_in'])){
   header('Location: login.php');
@@ -9,6 +12,8 @@ if (!isset($_SESSION['logged_in'])){
 ?>
 
 <title> Päiväkoti Pirtti | Admin </title>
+
+<!-- Adminpage -->
 
 <head>
   <meta charset="UTF-8">
@@ -47,6 +52,7 @@ body {
   <div class="jumbotron" style="text-align: center;">
   <h1 class="display-3">Tiedonhallinta</h1>
 
+  <!-- display message -->
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading"></h4>
@@ -56,9 +62,13 @@ body {
     <?php if (isset($_SESSION['logged_in'])): ?>
     <strong><p>Tervetuloa!
       <br>
-      <?php echo $_SESSION['username']; ?></p></strong>
+      <!-- display username -->
+      <?php echo $_SESSION['username']; ?></p></strong> 
     <?php endif; ?>
 
+    <!-- adminpage systems -->
+
+    <!-- newuser page -->
     <div class="list-group">
     <a href="newUser.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
@@ -67,6 +77,7 @@ body {
     <p class="mb-1">Uuden käyttäjän luonti</p>
   </a>
 
+  <!-- changepwd page -->
   <a href="../forgotpwd/loggedpwdreset.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Vaihda salasana</h5>
@@ -74,6 +85,7 @@ body {
     <p class="mb-1">Salasanan vaihto</p>
   </a>
 
+  <!-- upload image page -->
   <a href="../gallery/postimage.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Lataa Kuva</h5>
@@ -81,6 +93,7 @@ body {
     <p class="mb-1">Kuvien lisääminen</p>
   </a>
 
+  <!-- gallery page -->
   <a href="../gallery/galleryAdmin.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Gallery</h5>
@@ -88,6 +101,7 @@ body {
     <p class="mb-1">Kaikki kuvat</p>
   </a>
 
+  <!-- edithomepage -->
   <a href="editPages/editHomepage.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Kotisivun Muokkaaminen</h5>
@@ -95,6 +109,7 @@ body {
     <p class="mb-1">muokkaa kotisivua</p>
   </a>
 
+  <!-- editinfopage -->
   <a href="editPages/editInfopage.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Tietojasivun Muokkaaminen</h5>
@@ -102,6 +117,7 @@ body {
     <p class="mb-1">muokkaa tietojasivu</p>
   </a>
 
+  <!-- upload file -->
   <a href="uploadfile/fileUpload.php" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Omavalvontasuunnitelma</h5>
@@ -112,11 +128,14 @@ body {
 </div>
     
 <br><br>
+<!-- log out -->
 <a href="logout.php"><button type="button" class="btn btn-danger">Kirjaudu ulos</button></a>
 </div>
 
 </body>
 
+<!-- Javascript scripts -->
 <script src="../js/common.js"></script>
 
+<!-- footer -->
 <?php include_once '../layout/bot.inc.php'; ?>

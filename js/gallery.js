@@ -1,17 +1,18 @@
-window.addEventListener('load', getAllPosts);
+window.addEventListener('load', getAllPosts); //load all images
 
 function getAllPosts(){
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
       data = JSON.parse(this.responseText);
       console.log(data);
-      showPosts(data);
+      showPosts(data); //display all posts
     }
-  
-    ajax.open("GET", "../backend/getAllImages.php");
+    //get data
+    ajax.open("GET", "../backend/getAllImages.php"); //included SQL-database script
     ajax.send();
   }
 
+  //create for each post card looking style 
   function showPosts(data){
     data.forEach(post => {
       let postHtml = `

@@ -1,15 +1,26 @@
+<!-- layout -->
 <?php include_once '../layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Varhaiskasvatushakemus</title>
-
-
 
 <style>
 
 p {
   color: red;
 }
+
 </style>
+
+
+<!-- 
+kindergarten application.
+When application is filled, it will automatically send email to kindergarten. From application there will be saved in database following information :
+- parentemail
+- parentphonenumber
+- date
+- hash
+-->
+
 
 <body>
 
@@ -19,6 +30,7 @@ p {
 
   <br><br>
   
+  <!-- kindergarten form -->
   <form name="kinderGarten">
     <fieldset>
     <h1>Varhaiskasvatushakemus</h1>
@@ -245,8 +257,10 @@ p {
 </div>
 </div>
 
+<!-- Javascript scripts -->
 <script type="text/javascript" src="../js/kindergarten.js"></script>
 
 </body>
 
+<!-- Footer -->
 <?php include_once '../layout/bot.inc.php'; ?>

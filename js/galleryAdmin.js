@@ -1,6 +1,7 @@
-window.addEventListener('load', getAllPosts);
-document.getElementById('posts-container').addEventListener('click', postAction);
+window.addEventListener('load', getAllPosts); //load all images
+document.getElementById('posts-container').addEventListener('click', postAction); //button method (delete button)
 
+//ajax request
 function getAllPosts(){
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
@@ -8,11 +9,13 @@ function getAllPosts(){
       console.log(data);
       showPosts(data);
     }
-  
-    ajax.open("GET", "../backend/getAllImagesAdmin.php");
+    //get data
+    ajax.open("GET", "../backend/getAllImagesAdmin.php"); //included SQL-database script
     ajax.send();
   }
 
+
+  //create for each post card looking style 
   function showPosts(data){
     data.forEach(post => {
       let postHtml = `
@@ -29,24 +32,27 @@ function getAllPosts(){
     });
   }
 
+
+  //delete image
   function postAction(event){
     console.log(event.target);
-    const postId = event.target.parentElement.parentElement.dataset.postid;
+    const postId = event.target.parentElement.parentElement.dataset.postid; //target every image id
 
-        // Delete
+        //delete button
         if (event.target.classList.contains('delete')){
-          alert("You deleted post succesful!");  
-          deletePost(postId);
-          location.reload();
+          alert("Poistit kuvan!"); //alert message
+          deletePost(postId); //delete post for it
+          location.reload(); //refresh page
           }
       }
-
+      //delete post with id
       function deletePost(id) {
         let ajax = new XMLHttpRequest();
         ajax.onload = function(){
           data = JSON.parse(this.responseText);
           console.log(data);
         }
-        ajax.open("GET", "../backend/deletePostAdmin.php?id=" + id);
+        //get data
+        ajax.open("GET", "../backend/deletePostAdmin.php?id=" + id); //included SQL-database script + get image id
         ajax.send();
       }

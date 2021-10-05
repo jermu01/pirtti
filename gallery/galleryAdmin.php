@@ -9,9 +9,7 @@ if (!isset($_SESSION['logged_in'])){
 
 <title>Päiväkoti Pirtti | Galleria </title>
 
-<head>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+<!-- Admin gallery images. See all uploads and images can be deleted here -->
 
 <head>
   <meta charset="UTF-8">
@@ -21,6 +19,7 @@ if (!isset($_SESSION['logged_in'])){
   <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <style>
@@ -50,6 +49,7 @@ h1 {
 
 <center><a href="../admin/admin.php" class="previous">&laquo; Takaisin</a></center>
 
+<!-- display images -->
 <div class="container">
       <div id="posts-container">
       <div class="row">
@@ -62,4 +62,5 @@ h1 {
 
 </body>
 
+<!-- Javascript scripts -->
 <script src="../js/galleryAdmin.js"></script>
