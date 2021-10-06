@@ -39,7 +39,7 @@ $hash = $_GET['hash']; //GET hash
           );
 
             //mail
-            $to      = "pkpirttiry@surffi.fi"; //application creator
+            $to      = "$parentemail"; //application creator
             $subject = ' Päivähoitohakemus on luettu!';
             $message = '
             Hei!
