@@ -4,7 +4,7 @@ session_start();
 
 $data = array();
 
-$post_id = $_GET['id'];
+$post_id = $_GET['id']; //GET post_id
 
 include_once 'db.php'; //database connection
 

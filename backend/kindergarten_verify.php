@@ -4,7 +4,7 @@ include_once 'db.php'; //database connection
 
 $data = array();
 
-$hash = $_GET['hash'];
+$hash = $_GET['hash']; //GET hash
 
   try {
         $stmt = $conn->prepare("SELECT parentemail, hash FROM kindergarten_applications WHERE parentemail = :parentemail AND hash = :hash"); //SELECT statement

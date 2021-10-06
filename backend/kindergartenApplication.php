@@ -2,6 +2,7 @@
 
 	include_once 'db.php'; //database connection
 
+	//Post-data
 	$date = time();
 
 	$firstname = $_POST['firstname'];

@@ -5,7 +5,7 @@
     try {
         $stmt = $conn->prepare("SELECT * FROM gallery_image"); //SELECT statement
         $stmt->execute(); //stmt run
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC); //get all data
         $data = $result; //stmt result
 
     } catch (PDOException $e){

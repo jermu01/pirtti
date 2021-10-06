@@ -2,6 +2,7 @@
 
 	include_once 'db.php'; //database connection
 
+	//Post-data
 	$date = time();
 
 	$firstname = $_POST['firstname'];
@@ -90,7 +91,7 @@
 	"Lisätiedot hakemuksen perusteeksi:   $extrainfo" . "\r\n" .
 	"\r\n" .
 
-	"Kuittaa hakemus luetuksi: ". $url ."pre-school_verify.php?email=$parentemail&hash=$hash" . "\r\n" .
+	"Kuittaa hakemus luetuksi: ". $url ."pre-school_verify.php?email=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
 	"\r\n" .
 
 	"Älä vastaa tähän viestiin!". "\r\n" .

@@ -2,7 +2,7 @@
 
 session_start(); //session start
 
-// if there isnt not username & password
+// if there isnt not post-data of username & password
 if (!isset($_POST['username']) || !isset($_POST['password'])){
     $data = array(
         'error' => 'POST-dataa ei saatavilla!'
@@ -10,6 +10,7 @@ if (!isset($_POST['username']) || !isset($_POST['password'])){
     die(); //end
 }
 
+//Post-data
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -34,8 +35,8 @@ try {
             );
 
             $_SESSION['logged_in'] = true; //make you logged in
-            $_SESSION['user_id'] = $result['id']; //id
-            $_SESSION['username'] = $result['username']; //username
+            $_SESSION['user_id'] = $result['id']; //session id
+            $_SESSION['username'] = $result['username']; //session username
 
         } else {
             $data = array(

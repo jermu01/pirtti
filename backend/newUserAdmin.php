@@ -1,6 +1,6 @@
 <?php
 
-// if there isnt not username & password
+// if there isnt not post-data of username & password
 if (!isset($_POST['username']) || !isset($_POST['password'])){
     $data = array(
         'error' => 'POST-dataa ei saatavilla!'
@@ -8,6 +8,7 @@ if (!isset($_POST['username']) || !isset($_POST['password'])){
     die();
 }
 
+//Post-data
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $email = $_POST['email'];

@@ -5,7 +5,7 @@ document.forms['kinderGarten'].addEventListener('submit', infoApplication); //ad
 function infoApplication(event){
     event.preventDefault(); //stop form from submitting
 
-    // input fields from kindergarten application
+    //input fields from kindergarten application
     const firstname = document.forms['kinderGarten']['firstname'].value;
     const lastname  = document.forms['kinderGarten']['lastname'].value;
     const identity = document.forms['kinderGarten']['identity'].value;

@@ -2,6 +2,7 @@
 
 include_once 'db.php';
 
+//Post-data
 $email = $_POST['email'];
 
 try {

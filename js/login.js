@@ -15,9 +15,10 @@ function loginUsers(event){
         showMessage('error', 'Käyttäjänimi ei voi olla tyhjä'); //display message
         return;
     }
-    //password have to be at least 4 letter
-    if (password.length <= 4) {
-        showMessage('error', 'Salasana on oltava pidempi kuin 4 kirjainta'); //display message
+
+    //password cannot be null
+    if (password.length <= 0) {
+        showMessage('error', 'Täytä salasana'); //display message
         return;
     }
 

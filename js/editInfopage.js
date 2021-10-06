@@ -6,7 +6,7 @@ function editText(event) {
 
     const text = tinymce.get("text").getContent(); //takes all information from editor
 
-    // ajax request
+    //ajax request
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);

@@ -76,6 +76,10 @@ body {
           <input name="password" type="password" class="form-control" id="password" placeholder="Salasana">
         </div>
         <div class="form-group">
+          <label for="password">Salasana uudelleen </label>
+          <input name="confirmpwd" type="password" class="form-control" id="password2" placeholder="Salasana">
+        </div>
+        <div class="form-group">
         <label for="email">Sähköposti</label>
           <input name="email" type="email" class="form-control" id="email" placeholder="Sähköposti">
         </div>
@@ -86,7 +90,7 @@ body {
 </div>
 
 <!-- Javascript scripts -->
-<script src="../js/registerAdmin.js"></script>
+<script src="../js/newUser.js"></script>
 <script src="../js/common.js"></script>
 
 </body>

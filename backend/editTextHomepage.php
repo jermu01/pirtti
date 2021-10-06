@@ -2,6 +2,7 @@
 
 include_once 'db.php'; //database connection
 
+//Post-data
 $text = $_POST['text'];
 
 try {
