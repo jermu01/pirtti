@@ -1,16 +1,16 @@
 <?php
 
 //database information
-$servername = "localhost";
-$db_username = "pkpirtti_user";
-$db_password = "foFIKEW{Y-}8";
-$database = "pkpirtti_pirtti_db";
+// $servername = "localhost";
+// $db_username = "pkpirtti_user";
+// $db_password = "foFIKEW{Y-}8";
+// $database = "pkpirtti_pirtti_db";
 
 //testing
-// $servername = "localhost";
-// $db_username = "root";
-// $db_password = "";
-// $database = "pirtti";
+$servername = "localhost";
+$db_username = "root";
+$db_password = "";
+$database = "pirtti";
 
 $url = "https://localhost/pirtti/backend/"; //mail url
 
