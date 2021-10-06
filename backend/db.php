@@ -2,9 +2,9 @@
 
 //database information
 $servername = "localhost";
-$db_username = "root";
-$db_password = "";
-$dbname = "pirtti";
+$username = "pkpirtti_user";
+$password = "foFIKEW{Y-}8";
+$database = "pkpirtti_pirtti_db";
 
 $url = "https://localhost/pirtti/backend/"; //mail url
 
