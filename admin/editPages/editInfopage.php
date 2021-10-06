@@ -63,7 +63,7 @@ body {
   <h1>Tietojasivun Muokkaaminen</h1>
     <textarea id="text" name="text" class="tinymce" cols="30" rows="20">
     <?php
-    include_once '../../backend/showTextInfoPage.php'; //include script what display text in editor from SQL-Database
+    include_once '../../backend/showTextInfopage.php'; //include script what display text in editor from SQL-Database
     ?>
   </textarea>
 
