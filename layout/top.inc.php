@@ -33,7 +33,7 @@ h1 {
         <!-- Buttons -->
       <div class="navbar-links">
         <ul>
-            <a href="homepage.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
+            <a href="index.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
             <a href="info.php" class="btn btn-secondary btn-lg" role="button"><i class="fa fa-info"></i> Tietoja</button></a>
             <a href="contacts.php" class="btn btn-info btn-lg" role="button"><i class="fa fa-phone"></i> Yhteistiedot</button></a>
             <a href="applications.php" button class="btn btn-success btn-lg"><i class="fa fa-list-alt"></i> Hakemukset</button></a>
