@@ -76,8 +76,8 @@ body {
           <input name="password" type="password" class="form-control" id="password" placeholder="Salasana">
         </div>
         <div class="form-group">
-          <label for="password">Salasana uudelleen </label>
-          <input name="confirmpwd" type="password" class="form-control" id="password2" placeholder="Salasana">
+          <label for="password">Salasana uudelleen</label>
+          <input name="confirmpwd" type="password" class="form-control" id="confirmpwd" placeholder="Salasana uudelleen">
         </div>
         <div class="form-group">
         <label for="email">Sähköposti</label>
