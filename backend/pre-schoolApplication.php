@@ -42,7 +42,7 @@
 
 	$hash = md5($parentemail.$parentphonenumber); //hash
 
-	$to = $parentemail;//application creator
+	$to = "pkpirttiry@surffi.fi" ;//application creator
 
 	//mail
 	$subject = 'Esikouluhakemuksen tiedot';

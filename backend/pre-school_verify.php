@@ -38,7 +38,7 @@ try {
           'success' => 'Hakemus kuitattu luetuksi!'
           );
             //mail
-            $to      = $parentemail; //application creator
+            $to      = "pkpirttiry@surffi.fi"; //application creator
             $subject = ' Esikouluhakemus on luettu!';
             $message = '
             Hei!
