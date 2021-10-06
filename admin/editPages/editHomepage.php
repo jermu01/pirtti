@@ -61,7 +61,7 @@ body {
   <h1>Kotisivun Muokkaaminen</h1>
     <textarea id="text" name="text" cols="30" rows="20">
   <?php
-    include_once '../../backend/showTextHomePage.php'; //include script what display text in editor from SQL-Database
+    include_once '../backend/showTextHomePage.php'; //include script what display text in editor from SQL-Database
   ?>
   </textarea>
   <br>
