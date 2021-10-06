@@ -1,7 +1,16 @@
 <!-- layout -->
-<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once 'layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Ilmoitus </title>
+
+<style>
+
+.container {
+  max-width: 900px;
+  justify-content: center;
+}
+
+</style>
 
 <body>
 
@@ -13,5 +22,5 @@
     <p>Hakemuksen tekijälle on lähetetty sähköpostia, että hakemus on hyväksytty. </p>
   </div>
   <!-- footer -->
-  <?php include_once '../layout/bot.inc.php'; ?>
+  <?php include_once 'layout/bot.inc.php'; ?>
 </body>

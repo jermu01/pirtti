@@ -1,20 +1,22 @@
 <!-- layout -->
-<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once 'layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Kuvat</title>
 
 <style>
 
 body {
-    background-image: url(../img/bg.jpg);
+  background-image: url(img/bg.jpg);
 }
 
 h1 {
   text-align: center;
 }
 
+
 .container {
-  text-align: center;
+  max-width: 900px;
+  justify-content: center;
 }
 
 .container div {
@@ -48,7 +50,7 @@ img {
 </div>
 
 <!-- Javascript scripts -->
-<script src="../js/gallery.js"></script>
+<script src="js/gallery.js"></script>
 
 </body>
 

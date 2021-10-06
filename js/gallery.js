@@ -8,7 +8,7 @@ function getAllPosts(){
       showPosts(data); //display all posts
     }
     //get data
-    ajax.open("GET", "../backend/getAllImages.php"); //included SQL-database script
+    ajax.open("GET", "backend/getAllImages.php"); //included SQL-database script
     ajax.send();
   }
 
@@ -19,7 +19,7 @@ function getAllPosts(){
       <strong><div style="max-width: 20rem;"></strong>
           <h4 class="card-title">${post.title}</h4>
           <p class="card-text">${post.text}</p>
-          <img src="../img/uploads/${post.file}" width="260px;"/>
+          <img src="img/uploads/${post.file}" width="260px;"/>
       </div>`;
       document.getElementById("posts-container").innerHTML += postHtml
     });

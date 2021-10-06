@@ -1,9 +1,13 @@
 <!-- layout -->
-<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once 'layout/top.inc.php'; ?>
 
-<title>Päiväkoti Pirtti | Esikouluhakemus</title>
+<title>Päiväkoti Pirtti | Varhaiskasvatushakemus</title>
 
 <style>
+
+body {
+    background-image: url(img/bg.jpg);
+}
 
 .container {
   margin: auto;
@@ -16,8 +20,9 @@ p {
 
 </style>
 
+
 <!-- 
-pre-school application.
+kindergarten application.
 When application is filled, it will automatically send email to kindergarten. From application there will be saved in database following information :
 - parentemail
 - parentphonenumber
@@ -33,11 +38,11 @@ When application is filled, it will automatically send email to kindergarten. Fr
   <a href="applications.php" class="previous">&laquo; Takaisin</a>
 
   <br><br>
-
-  <!-- preschool form -->
-  <form name="preSchool">
+  
+  <!-- kindergarten form -->
+  <form name="kinderGarten">
     <fieldset>
-    <h1>Esiopetushakemus</h1>
+    <h1>Varhaiskasvatushakemus</h1>
     <br>
     <p>HUOM! * merkityt on pakollisia tietoja!</p>
     <br>
@@ -159,28 +164,37 @@ When application is filled, it will automatically send email to kindergarten. Fr
   <br><br>
 
 
-  <h4>Varhaiskasvatuksen tarve</h4>
+  <h4>Toivottu päivähoitomuoto</h4>
   <div class="form-group">
-      <label for="needcare" class="form-label mt-4"></label>
-      <select class="form-select" id="needcare" name="needcare" placeholder="needcare" required>
-        <option value="" selected disabled>Valitse</option>
-        <option value="Pelkkä esiopetus, ei varhaiskasvatuksen tarvetta">Pelkkä esiopetus, ei varhaiskasvatuksen tarvetta</option>
-        <option value="Esiopetus & enintään 5h/pv varhaiskasvatus">Esiopetus & enintään 5h/pv varhaiskasvatus</option>
+      <label for="daycare" class="form-label mt-4"></label>
+      <select class="form-select s-choice" id="daycare" name="daycare" required>
+        <option value="" selected disabled>Valitse*</option>
+        <option value="fullday">Kokopäivähoito</option>
+        <option value="15pv">Max 15pv/kk</option>
+        <option value="10pv">Max 10pv/kk</option>
       </select>
     </div>
 
 
 <br><br>
 
-<h4>Kuljetuksen tarve</h4>
+
+<strong><h4>Toivottu hoitoaika</h4></strong>
+    <br>
   <div class="form-group">
-      <label for="transport" class="form-label mt-4"></label>
-      <select class="form-select" id="transport" name="transport" required>
-        <option value="" selected disabled>Valitse</option>
-        <option value="kyllä">Lapsi tarvitsee kuljetuksen</option>
-        <option vlaue="ei">Lapsi ei tarvitse kuljetusta</option>
-      </select>
-    </div>
+  <div class="form-floating mb-3">
+  <input type="startdate" class="form-control to-db" id="startdate" placeholder="startdate" required>
+    <label for="startdate">Hoidon tarpeen alkamispäivä ( pv. kk . v )*</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="dayscount" class="form-control to-db" id="dayscount" placeholder="dayscount" required>
+    <label for="dayscount">Hoitopäivien lukumäärä pv/kk*</label>
+  </div>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="dailycare" class="form-control to-db" id="dailycare" placeholder="dailycare" required>
+    <label for="dailycare">Päivittäinen hoitoaika*</label>
+  </div>
 
 
   <br><br>
@@ -211,7 +225,7 @@ When application is filled, it will automatically send email to kindergarten. Fr
   <br>
 
 
-  <div class="form-floating mb-3">
+    <div class="form-floating mb-3">
     <input type="hospital" class="form-control to-db" id="hospital" placeholder="hospital" required>
     <label for="hospital">Mitä lastenneuvolaa olette viimeksi käyttänyt, osoite*</label>
   </div>
@@ -250,13 +264,11 @@ When application is filled, it will automatically send email to kindergarten. Fr
 </form>
 
 </div>
+<!-- Footer -->
+<?php include_once 'layout/bot.inc.php'; ?>
 </div>
 
 <!-- Javascript scripts -->
-<script type="text/javascript" src="../js/pre-school.js"></script>
+<script type="text/javascript" src="js/kindergarten.js"></script>
 
 </body>
-
-<!-- Footer -->
-<?php include_once '../layout/bot.inc.php'; ?>
-

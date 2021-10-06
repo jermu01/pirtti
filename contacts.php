@@ -1,5 +1,5 @@
 <!-- layout -->
-<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once 'layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Yhteystiedot</title>
 
@@ -9,6 +9,7 @@
   margin: auto;
   max-width: 400px;
   text-align: center;
+  
 }
 
 </style>
@@ -24,7 +25,7 @@
   <h2>Yhteystiedot</h2>
       <span style="color: black"><p><i class="fa fa-phone fa-lg"></i> Puh. yläkerta 0440 214 298</p>
         <p><i class="fa fa-phone fa-lg"></i> Puh. alakerta 0447 214 297</p>
-        <p><i class="fa fa-home fa-lg"></i><a href='https://goo.gl/maps/dLP99r2Ds8n'>Telkänkatu 2 50190 Mikkeli</a></p>
+        <p><i class="fa fa-home fa-lg"></i><a href='https://goo.gl/maps/dLP99r2Ds8n' target="_blank">Telkänkatu 2 50190 Mikkeli</a></p>
         <p><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:pkpirttiry@surffi.fi">pkpirttiry@surffi.fi</a></p>
         <p><i class="fa fa-phone fa-lg"></i> puh. 0440 214 297</p></p>
       <strong><p><i class="fa fa-user fa-lg"></i> Heli Joensuu, päiväkodin johtaja</p>
@@ -36,7 +37,7 @@
       </span>
       </div>
       <!-- footer -->
-      <?php include_once '../layout/bot.inc.php'; ?>
+      <?php include_once 'layout/bot.inc.php'; ?>
   </div>
   
 </body>

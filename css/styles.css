@@ -1,12 +1,15 @@
 
 .container {
-  margin: auto;
-  max-width: 900px;
-}
+    margin: auto;
+    align-items:center;
+    justify-content: center;
 
-
-.buttons {
-    text-align: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .header {
@@ -60,9 +63,9 @@ body {
         width: 100%;
     }
 
-    .navbar-links ul {
+    .navbar-links ul a {
         display: flex;
-        width: 100%;
+        width: 230%;
         flex-direction: column;
     }
 
@@ -78,6 +81,7 @@ body {
         display: flex;
     }
 }
+
 
 
 

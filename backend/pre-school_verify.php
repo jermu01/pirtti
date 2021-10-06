@@ -55,7 +55,7 @@ try {
                         'Reply-To: noreply@pirtti.com' . "\r\n" .
                         'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $message, $headers); //all information will be sended
-            header("Location: ../website/applicationReaded.php"); //control you in new website
+            header("Location: ../applicationReaded.php"); //control you in new website
       }
 
     } catch (PDOException $e) {

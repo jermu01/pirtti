@@ -53,7 +53,7 @@ function infoApplication(event){
     }
     
     //send data
-    ajax.open("POST", "../backend/pre-schoolApplication.php", true); //included SQL-database script
+    ajax.open("POST", "backend/pre-schoolApplication.php", true); //included SQL-database script
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     //fields from form what u want to send
     ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&needcare="+needcare+"&transport="+transport+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);

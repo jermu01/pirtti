@@ -1,13 +1,15 @@
 <!-- layout -->
-<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once 'layout/top.inc.php'; ?>
 
 <title>Päiväkoti Pirtti | Hakemukset</title>
 
 <style>
+
 .container {
   margin: auto;
   max-width: 900px;
 }
+
 </style>
 
 <!-- Applications list -->
@@ -47,4 +49,4 @@
 </body>
 
   <!-- footer -->
-  <?php include_once '../layout/bot.inc.php'; ?>
+  <?php include_once 'layout/bot.inc.php'; ?>
