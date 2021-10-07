@@ -44,9 +44,9 @@
 
 	$hash = md5($parentemail.$parentphonenumber); //hash
 
-	$url = "https://localhost/public_html/backend"; 
+	$url = "https://localhost/pirtti/backend"; 
 
-	$to = "jermu.karjalainen@gmail.com"; //application creator
+	$to = "pkpirttiry@surffi.fi"; //application creator
 
 	//mail
 	$subject = 'Varhaiskasvatushakemuksen tiedot';
