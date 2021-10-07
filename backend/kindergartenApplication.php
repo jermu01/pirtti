@@ -46,8 +46,8 @@
 
 	$url = "https://www.pkpirttiry.fi/backend/"; 
 
-	// $to = "pkpirttiry@surffi.fi"; //application creator
-	$to = "jermu.karjalainen@gmail.com"; //application creator
+	$to = "pkpirttiry@surffi.fi"; //application creator
+	// $to = "jermu.karjalainen@gmail.com"; //application creator
 
 	//mail
 	$subject = 'Varhaiskasvatushakemuksen tiedot';

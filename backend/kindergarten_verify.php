@@ -54,6 +54,7 @@ $hash = $_GET['hash']; //GET hash
             ';
             $headers = 'Päivähoitohakemus | Pirtti' . "\r\n";
             mail($to, $subject, $message, $headers); //all information will be sended
+            header("Location: ../applicationReaded.php"); //control you in new website
       }
 
     } catch (PDOException $e) {
