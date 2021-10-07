@@ -96,7 +96,7 @@
 	"Lisätiedot hakemuksen perusteeksi:   $extrainfo" . "\r\n" .
 	"\r\n" .
 
-	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?email=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
+	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
 	"\r\n" .
 
 	"Älä vastaa tähän viestiin!". "\r\n" .
