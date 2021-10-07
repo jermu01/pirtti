@@ -44,9 +44,10 @@
 
 	$hash = md5($parentemail.$parentphonenumber); //hash
 
-	$url = "https://localhost/pirtti/backend"; 
+	$url = "https://www.pkpirttiry.fi/backend/"; 
 
-	$to = "pkpirttiry@surffi.fi"; //application creator
+	// $to = "pkpirttiry@surffi.fi"; //application creator
+	$to = "jermu.karjalainen@gmail.com"; //application creator
 
 	//mail
 	$subject = 'Varhaiskasvatushakemuksen tiedot';
@@ -95,7 +96,8 @@
 	"Lisätiedot hakemuksen perusteeksi:   $extrainfo" . "\r\n" .
 	"\r\n" .
 
-	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
+	// "Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
+	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" .
 	"\r\n" .
 
 	"Älä vastaa tähän viestiin!". "\r\n" .
