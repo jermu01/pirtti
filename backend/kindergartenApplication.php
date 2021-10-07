@@ -44,6 +44,8 @@
 
 	$hash = md5($parentemail.$parentphonenumber); //hash
 
+	$url = "https://localhost/pirtti/backend/kindergarten_verify.php?parentemail=$parentemail";
+
 	// $to = "pkpirttiry@surffi.fi"; //application creator
 	$to = "jermu.karjalainen@gmail.com";
 

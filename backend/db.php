@@ -12,7 +12,7 @@ $db_username = "root";
 $db_password = "";
 $database = "pirtti";
 
-$url = "https://localhost/pirtti/backend/"; //mail url
+// $url = "http://localhost/pirti/pirtti/" //mail url
 
 //database connection
 try {
