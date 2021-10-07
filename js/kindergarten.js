@@ -55,7 +55,7 @@ function infoApplication(event){
     
     }
     
-    ajax.open("POST", "backend/kindergartenApplication.php", true); //included SQL-database script
+    ajax.open("POST", "../backend/kindergartenApplication.php", true); //included SQL-database script
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     //fields from form what u want to send
     ajax.send("firstname="+firstname+"&lastname="+lastname+"&identity="+identity+"&address="+address+"&language="+language+"&pets="+pets+"&firstname2="+firstname2+"&lastname2="+lastname2+"&career="+career+"&job="+job+"&parentphonenumber="+parentphonenumber+"&jobhours="+jobhours+"&parentemail="+parentemail+"&firstname3="+firstname3+"&lastname3="+lastname3+"&career2="+career2+"&job2="+job2+"&parentphonenumber2="+parentphonenumber2+"&jobhours2="+jobhours2+"&parentemail2="+parentemail2+"&relationship="+relationship+"&daycare="+daycare+"&startdate="+startdate+"&dayscount="+dayscount+"&dailycare="+dailycare+"&familychildrens="+familychildrens+"&becontacted="+becontacted+"&hospital="+hospital+"&allergic="+allergic+"&hospital2="+hospital2+"&extrainfo="+extrainfo);
