@@ -60,12 +60,10 @@ body {
 
     .navbar-links {
         display: none;
-        width: 100%;
     }
 
     .navbar-links ul a {
         display: flex;
-        width: 230%;
         flex-direction: column;
     }
 
@@ -78,7 +76,7 @@ body {
     }
 
     .navbar-links.active {
-        display: flex;
+        display: block;
     }
 }
 
