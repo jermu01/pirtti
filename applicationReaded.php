@@ -1,7 +1,7 @@
 <!-- layout -->
 <?php include_once 'layout/top.inc.php'; ?>
 
-<title>Päiväkoti Pirtti | Ilmoitus </title>
+<title>Päiväkoti Pirtti | Hyväksytty </title>
 
 <style>
 

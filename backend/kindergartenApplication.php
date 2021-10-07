@@ -46,8 +46,8 @@
 
 	$url = "https://www.pkpirttiry.fi/backend/"; 
 
-	$to = "pkpirttiry@surffi.fi"; //application creator
-	// $to = "jermu.karjalainen@gmail.com"; //application creator
+	$to = "pkpirttiry@surffi.fi"; //application will be sended for this email
+	//$to = "jermu.karjalainen@gmail.com"; //application will be sended for this email
 
 	//mail
 	$subject = 'Varhaiskasvatushakemuksen tiedot';
@@ -94,11 +94,8 @@
 	"Sairaudet, allergiat, ruokavalio ym:   $allergic" . "\r\n" .
 	"Onko lapsi ollut sairaalahoidossa tai jatkuvassa lääkärinhoidossa, milloin ja miksi?:   $hospital2" . "\r\n" .
 	"Lisätiedot hakemuksen perusteeksi:   $extrainfo" . "\r\n" .
-	"\r\n" .
 
-	// "Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
-	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" .
-	"\r\n" .
+	"Kuittaa hakemus luetuksi: ". $url ."kindergarten_verify.php?parentemail=$parentemail&hash=$hash" . "\r\n" . //link for accepting application
 
 	"Älä vastaa tähän viestiin!". "\r\n" .
 	"\r\n" .

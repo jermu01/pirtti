@@ -12,7 +12,6 @@ $database = "pkpirtti_pirtti_db";
 // $db_password = "";
 // $database = "pirtti";
 
-// $url = "http://localhost/pirti/pirtti/" //mail url
 
 //database connection
 try {
