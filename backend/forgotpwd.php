@@ -28,7 +28,7 @@ try {
     //mail
 
     // $url = "https://localhost/pirtti/forgotpwd/pwdreset.php"; //url to website where u can create new password
-    $url = "https://www.pkpirttiry.fi/forgotpwd/pwdreset.php";
+    $url = "https://www.pkpirttiry.fi/forgotpwd/pwdreset.php?email=$email";
 
     $to = $email; //password reset requester email
 
