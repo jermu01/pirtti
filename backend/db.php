@@ -1,6 +1,6 @@
 <?php
 
-//database information
+//real database information
 // $servername = "localhost";
 // $db_username = "pkpirtti_user";
 // $db_password = "foFIKEW{Y-}8";
