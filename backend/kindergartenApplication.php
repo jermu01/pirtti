@@ -46,8 +46,7 @@
 
 	$url = "https://localhost/pirtti/backend/";
 
-	// $to = "pkpirttiry@surffi.fi"; //application creator
-	$to = "jermu.karjalainen@gmail.com";
+	$to = "pkpirttiry@surffi.fi"; //application creator
 
 	//mail
 	$subject = 'Varhaiskasvatushakemuksen tiedot';
