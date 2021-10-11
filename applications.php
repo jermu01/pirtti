@@ -3,13 +3,12 @@
 
 <title>Päiväkoti Pirtti | Hakemukset</title>
 
+<!-- style -->
 <style>
-
 .container {
   margin: auto;
   max-width: 900px;
 }
-
 </style>
 
 <!-- Applications list -->

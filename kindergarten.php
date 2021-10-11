@@ -3,8 +3,8 @@
 
 <title>Päiväkoti Pirtti | Varhaiskasvatushakemus</title>
 
+<!-- style -->
 <style>
-
 body {
     background-image: url(img/bg.jpg);
 }
@@ -17,7 +17,6 @@ body {
 p {
   color: red;
 }
-
 </style>
 
 

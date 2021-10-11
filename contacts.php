@@ -3,15 +3,14 @@
 
 <title>Päiväkoti Pirtti | Yhteystiedot</title>
 
+<!-- style -->
 <style>
-
 .container {
   margin: auto;
   max-width: 400px;
   text-align: center;
   
 }
-
 </style>
 
 <!-- Contacts -->

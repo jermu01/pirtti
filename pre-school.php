@@ -3,8 +3,8 @@
 
 <title>Päiväkoti Pirtti | Esikouluhakemus</title>
 
+<!-- style -->
 <style>
-
 .container {
   margin: auto;
   max-width: 900px;
@@ -13,7 +13,6 @@
 p {
   color: red;
 }
-
 </style>
 
 <!-- 

@@ -3,13 +3,12 @@
 
 <title>Päiväkoti Pirtti | Tietoja</title>
 
+<!-- style -->
 <style>
-
 .container {
   max-width: 900px;
   justify-content: center;
 }
-
 </style>
 
 <body>

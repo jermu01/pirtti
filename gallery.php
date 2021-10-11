@@ -3,8 +3,8 @@
 
 <title>Päiväkoti Pirtti | Kuvat</title>
 
+<!-- style -->
 <style>
-
 body {
   background-image: url(img/bg.jpg);
 }
@@ -26,7 +26,6 @@ h1 {
 img {
   padding: 10px;
 }
-
 </style>
 
 <body>
