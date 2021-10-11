@@ -59,7 +59,6 @@ h1 {
   </div>
 </div>
 
-
 </body>
 
 <!-- Javascript scripts -->

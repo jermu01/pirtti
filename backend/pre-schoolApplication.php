@@ -45,7 +45,7 @@
 	$url = "https://www.pkpirttiry.fi/backend/"; 
 
 	$to = "pkpirttiry@surffi.fi"; //application will be sended for this email
-	// $to = "jermu.karjalainen@gmail.com"; //application will be sended for this email
+	//$to = "jermu.karjalainen@gmail.com"; //application will be sended for this email
 
 	//mail
 	$subject = 'Esikouluhakemuksen tiedot';

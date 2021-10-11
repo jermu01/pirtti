@@ -19,7 +19,7 @@ function getAllPosts(){
   function showPosts(data){
     data.forEach(post => {
       let postHtml = `
-      <strong><div data-postid=${post.id} class="card border-primary mb-3" style="max-width: 20rem;"></strong>
+      <strong><div data-postid="${post.id}" data-postfile="${post.file}" class="card border-primary mb-3" style="max-width: 20rem;"></strong>
         <div class="card-header"> ${post.name}</div>
         <div class="card-body">
           <h4 class="card-title">${post.title}</h4>
@@ -37,11 +37,13 @@ function getAllPosts(){
   function postAction(event){
     console.log(event.target);
     const postId = event.target.parentElement.parentElement.dataset.postid; //target every image id
+    const postFile = event.target.parentElement.parentElement.dataset.postfile; //target every image id
 
         //delete button
         if (event.target.classList.contains('delete')){
           alert("Poistit kuvan!"); //alert message
           deletePost(postId); //delete post for it
+          unlinkImage(postFile); //unlink image from folder
           location.reload(); //refresh page
           }
       }
@@ -54,5 +56,17 @@ function getAllPosts(){
         }
         //get data
         ajax.open("GET", "../backend/deletePostAdmin.php?id=" + id); //included SQL-database script + get image id
+        ajax.send();
+      }
+
+      //unlink image
+      function unlinkImage(file) {
+        let ajax = new XMLHttpRequest();
+        ajax.onload = function(){
+        data = JSON.parse(this.responseText);
+        console.log(data);
+        }
+        //get data
+        ajax.open("GET", "../backend/unlinkImage.php?file=" + file); //included SQL-database script + get file
         ajax.send();
       }
