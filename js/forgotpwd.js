@@ -6,11 +6,6 @@ function forgotPassword(event){
 
     const email = document.forms['forgotpwd']['email'].value; //email field from form
 
-    if (email.length <= 0) {
-        showMessage('error', 'Täytä sähköposti kenttä!'); //email have to be longer than 4 letters
-        return;
-    }
-
     //ajax request
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
