@@ -66,6 +66,10 @@ input[type="email"]{
     margin-top: 10px;
 }
 
+#button {
+    display: none;
+}
+
 </style>
 
 <body>
@@ -94,6 +98,7 @@ input[type="email"]{
           <div id="icon"></div>
           <p id="error-msg">Anna kelvollinen sähköpostiosoite</p>
         </div>
+        <div id="button">
         <button type="submit" class="btn btn-primary">Lähetä salasana pyyntö</button>
       </fieldset>
     </form>
@@ -115,17 +120,20 @@ function checker(){
         icon.style.color = '#2ecc71';
         errorMsg.style.display = 'none';
         emailId.style.border = '2px solid #2ecc71';
+        button.style.display = 'block';
     }
     else if(emailId.value == ""){
         icon.style.display = 'none';
         errorMsg.style.display = 'none';
         emailId.style.border = '2px solid #5fa0fa';
+        button.style.display = 'none';
     }
     else{
         icon.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
         icon.style.color = '#ff2851';
         errorMsg.style.display = 'block';
         emailId.style.border = '2px solid #ff2851';
+        button.style.display = 'none';
     }
 
 }

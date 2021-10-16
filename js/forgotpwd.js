@@ -6,8 +6,8 @@ function forgotPassword(event){
 
     const email = document.forms['forgotpwd']['email'].value; //email field from form
 
-    if (email.length <= 4) {
-        showMessage('error', 'Sähköpostin on oltava vähintään 4 kirjainta'); //email have to be longer than 4 letters
+    if (email.length <= 0) {
+        showMessage('error', 'Täytä sähköposti kenttä!'); //email have to be longer than 4 letters
         return;
     }
 
@@ -27,4 +27,3 @@ function forgotPassword(event){
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("email="+email); //fields from form what u want to send
 }
-
