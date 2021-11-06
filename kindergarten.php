@@ -5,10 +5,6 @@
 
 <!-- style -->
 <style>
-body {
-    background-image: url(img/bg.jpg);
-}
-
 .container {
   margin: auto;
   max-width: 900px;

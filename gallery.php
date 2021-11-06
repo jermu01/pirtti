@@ -5,14 +5,10 @@
 
 <!-- style -->
 <style>
-body {
-  background-image: url(img/bg.jpg);
-}
 
 h1 {
   text-align: center;
 }
-
 
 .container {
   max-width: 900px;
@@ -46,7 +42,6 @@ img {
       </div>
     </div>
   </div>
-</div>
 
 <!-- Javascript scripts -->
 <script src="js/gallery.js"></script>

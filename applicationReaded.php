@@ -7,13 +7,12 @@
 <style>
 .container {
   max-width: 900px;
-  justify-content: center;
 }
 </style>
 
 <body>
 
-<!-- When kindergarten is accpeted application, you will be controlled in this website. -->
+<!-- When kindergarten/pre-school applications is accpeted, you will be controlled in this website. -->
 
 <div class="container">
   <div class="jumbotron">

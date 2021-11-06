@@ -33,11 +33,11 @@ h1 {
         <!-- Buttons -->
       <div class="navbar-links">
         <ul>
-            <a href="index.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</button></a>
-            <a href="info.php" class="btn btn-secondary btn-lg" role="button"><i class="fa fa-info"></i> Tietoja</button></a>
-            <a href="contacts.php" class="btn btn-info btn-lg" role="button"><i class="fa fa-phone"></i> Yhteistiedot</button></a>
-            <a href="applications.php" button class="btn btn-success btn-lg"><i class="fa fa-list-alt"></i> Hakemukset</button></a>
-            <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Galleria</button></a>
+            <a href="index.php" class="btn btn-primary btn-lg" role="button"><i class="fa fa-home"></i> Etusivu</a>
+            <a href="info.php" class="btn btn-secondary btn-lg" role="button"><i class="fa fa-info"></i> Tietoja</a>
+            <a href="contacts.php" class="btn btn-info btn-lg" role="button"><i class="fa fa-phone"></i> Yhteistiedot</a>
+            <a href="applications.php" class="btn btn-success btn-lg"><i class="fa fa-list-alt"></i> Hakemukset</a>
+            <a href="gallery.php" class="btn btn-danger btn-lg" role="button"><i class="fa fa-folder"></i> Galleria</a>
         </ul>
       </div>
     </nav>
